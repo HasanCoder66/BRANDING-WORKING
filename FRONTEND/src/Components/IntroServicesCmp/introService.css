@@ -1,0 +1,13 @@
+@media (max-width: 640px) {
+    .serviceTag {
+        width: 100% !important;
+        padding: 0 10px;
+        margin: 10px 0px;
+    }
+}
+
+@media (max-width: 380px) {
+    .serviceTitle {
+        font-size: 1.5rem !important;
+    }
+}
