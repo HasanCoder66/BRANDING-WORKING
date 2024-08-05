@@ -4,7 +4,7 @@ import data from "./AllServiceCard/servicesData";
 const AllServices = () => {
   return (
     <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
-    <div className="w-[100vw] ">
+    <div data-aos="zoom-in-left" className="w-[100vw] ">
       <img
         src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
         alt="image"

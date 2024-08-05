@@ -16,7 +16,7 @@ const AboutPage = () => {
         <link rel='canonical' href='/about'/>
       </Helmet>
     <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
-      <div className="w-[100vw] ">
+      <div data-aos="fade-down" className="w-[100vw] ">
         <img
           src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
           alt="image"
@@ -39,7 +39,7 @@ const AboutPage = () => {
           journey towards enduring success.
         </p>
       </div>
-      <div className="">
+      <div data-aos="zoom-in">
         <div className="flex justify-evenly flex-wrap gap-[15px]">
           {TeamMateData.map((data) => (
             <TeamMatesCard data={data} />

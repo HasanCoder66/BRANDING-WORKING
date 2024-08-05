@@ -14,7 +14,7 @@ function About({ type }) {
         <div className="lg:p-[100px] py-[30px]">
           <div className=" m-auto px-6 md:px-12 xl:px-6">
             <div className="md:flex md:gap-6 lg:items-center lg:gap-12">
-              <div className="md:5/12 lg:w-5/12 ">
+              <div data-aos="zoom-in-right" className="md:5/12 lg:w-5/12 ">
                 <img
                 src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
 
