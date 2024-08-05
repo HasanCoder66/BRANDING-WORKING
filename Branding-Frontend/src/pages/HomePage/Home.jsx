@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Hero, ServiceSectionHead, ServicesCards } from "../../components";
+import { Button, Hero, ServiceSectionHead, ServicesCards } from "../../components";
 
 const HomePage = () => {
   useEffect(() => {
@@ -34,7 +34,7 @@ const HomePage = () => {
   }, []);
   return (
     <>
-    {/* For Seo ===>  */}
+      {/* For Seo ===>  */}
       <Helmet>
         <meta
           name="description"
@@ -45,14 +45,39 @@ const HomePage = () => {
       </Helmet>
 
       <div className=" landingContainer homeContainer flex flex-col items-center">
-        {/* Hero ===> Component  */}
         <Hero />
-        {/* Service Section Head ===> Component  */}
         <ServiceSectionHead />
-        {/* Services cards ===> Component */}
-        <ServicesCards /> 
+        <ServicesCards />
 
-
+        <div className="landingContainer about-page text-center">
+          <div className="lg:p-[100px] py-[30px]">
+            <div className=" m-auto px-6 md:px-12 xl:px-6">
+              <div className="md:flex md:gap-6 lg:items-center lg:gap-12">
+                <div data-aos="zoom-in-right" className="md:5/12 lg:w-5/12 ">
+                  <img
+                    src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
+                    alt="image"
+                    className="sm:w-[100%] "
+                  />
+                </div>
+                <div className="md:7/12 lg:w-6/12">
+                  <h2 className="text-2xl text-[#fca311] font-bold md:text-4xl">
+                    About Branding Hopes
+                  </h2>
+                  <p className="text mt-6 text-white text-center">
+                    At Branding Hopes, we are more than just a digital marketing
+                    agency – we are your partners in success. With a passion for
+                    creativity and a drive for results, we are dedicated to
+                    helping businesses like yours thrive in the digital age.
+                  </p>
+                  <div className="mt-[2rem]">
+                    <Button text="Read More" link="/about" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {/* <ServiceSection /> 
        <div className="">
