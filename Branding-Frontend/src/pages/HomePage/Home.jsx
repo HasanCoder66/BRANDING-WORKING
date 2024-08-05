@@ -1,16 +1,16 @@
 import "./Home.css";
-// import Landing from "../../Components/Hero/Landing";
 // import BlogPage from "../BlogPage/Blog.jsx";
 // import ContactPage from "../ContactPage/ContactPage";
 // import About from "../../Components/About/About";
 // import ServiceSection from "../../Components/ServiceSection/ServiceSection";
-import { Helmet, } from "react-helmet-async";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Hero } from "../../components";
 
 const HomePage = () => {
-  useEffect (()=> {
+  useEffect(() => {
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -31,7 +31,7 @@ const HomePage = () => {
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
-  },[])
+  }, []);
   return (
     <>
       <Helmet>
@@ -44,13 +44,13 @@ const HomePage = () => {
       </Helmet>
 
       <div className="homeContainer flex flex-col items-center">
-        {/* <Landing /> */}
-        {/* <ServiceSection /> */}
-        <div className="">
-          {/* <About /> */}
-        </div>
-        {/* <BlogPage /> */}
-        {/* <ContactPage /> */}
+        <Hero />
+        {/* <ServiceSection /> 
+         <div className="">
+          <About />
+        </div> 
+         <BlogPage /> 
+         <ContactPage /> */}
       </div>
     </>
   );
