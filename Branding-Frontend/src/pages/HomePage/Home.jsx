@@ -1,9 +1,9 @@
-import "./HomePage.css";
-import Landing from "../../Components/Hero/Landing";
-import BlogPage from "../BlogPage/Blog.jsx";
-import ContactPage from "../ContactPage/ContactPage";
-import About from "../../Components/About/About";
-import ServiceSection from "../../Components/ServiceSection/ServiceSection";
+import "./Home.css";
+// import Landing from "../../Components/Hero/Landing";
+// import BlogPage from "../BlogPage/Blog.jsx";
+// import ContactPage from "../ContactPage/ContactPage";
+// import About from "../../Components/About/About";
+// import ServiceSection from "../../Components/ServiceSection/ServiceSection";
 import { Helmet, } from "react-helmet-async";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
