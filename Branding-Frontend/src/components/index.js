@@ -4,6 +4,8 @@ import Hero from './Hero';
 import Dropdown from './Dropdown';
 import Button from './Button'
 import TextEffect from './TextEffects';
+import ServiceSectionHead from './ServiceSectionHead';
+import ServicesCards from './ServicesCards';
 import Footer from './Footer';
 
 export {
@@ -13,5 +15,7 @@ export {
   Dropdown,
   Button,
   TextEffect,
+  ServiceSectionHead,
+  ServicesCards,
   Footer,
 };

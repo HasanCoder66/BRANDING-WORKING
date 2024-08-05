@@ -43,7 +43,7 @@ const Hero = () => {
     <>
       
       <div className="landingContainer overflow-x-hidden w-[100%]">
-        <div className="wrapper w-[100%] px-[80px] py-[20px] flex xl:flex-row flex-col item-center justify-between text-center uppercase font-['Poppins', sans-serif'] mt-[90px]">
+        <div className="wrapper w-[100%] px-[80px]  flex xl:flex-row flex-col item-center justify-between text-center uppercase font-['Poppins', sans-serif'] mt-[90px]">
           <motion.div
             variants={container}
             initial="hidden"

@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Hero } from "../../components";
+import { Hero, ServiceSectionHead, ServicesCards } from "../../components";
 
 const HomePage = () => {
   useEffect(() => {
@@ -34,6 +34,7 @@ const HomePage = () => {
   }, []);
   return (
     <>
+    {/* For Seo ===>  */}
       <Helmet>
         <meta
           name="description"
@@ -43,15 +44,22 @@ const HomePage = () => {
         <link rel="canonical" href="https://www.brandinghopes.com/" />
       </Helmet>
 
-      <div className="homeContainer flex flex-col items-center">
+      <div className=" landingContainer homeContainer flex flex-col items-center">
+        {/* Hero ===> Component  */}
         <Hero />
-        {/* <ServiceSection /> 
-         <div className="">
-          <About />
-        </div> 
-         <BlogPage /> 
-         <ContactPage /> */}
+        {/* Service Section Head ===> Component  */}
+        <ServiceSectionHead />
+        {/* Services cards ===> Component */}
+        <ServicesCards /> 
+
+
       </div>
+      {/* <ServiceSection /> 
+       <div className="">
+        <About />
+      </div> 
+       <BlogPage /> 
+       <ContactPage /> */}
     </>
   );
 };
