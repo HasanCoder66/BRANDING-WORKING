@@ -1,6 +1,6 @@
 import "./HomePage.css";
 import Landing from "../../Components/Hero/Landing";
-import BlogPage from "../BlogPage/BlogPage";
+import BlogPage from "../BlogPage/Blog.jsx";
 import ContactPage from "../ContactPage/ContactPage";
 import About from "../../Components/About/About";
 import ServiceSection from "../../Components/ServiceSection/ServiceSection";
