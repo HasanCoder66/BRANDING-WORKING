@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Button, Hero, ServiceSectionHead, ServicesCards } from "../../components";
+import { Button, Hero, ServiceSectionHead, ServicesCards, Testimonials } from "../../components";
 
 const HomePage = () => {
   useEffect(() => {
@@ -78,6 +78,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+
+        <Testimonials />
+
       </div>
       {/* <ServiceSection /> 
        <div className="">

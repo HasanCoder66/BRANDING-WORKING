@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 {
   "name": "branding-frontend",
   "private": true,
@@ -21,8 +30,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.26.0",
-    "react-type-animation": "^3.2.0"
+    "react-type-animation": "^3.2.0",
+    "react-router": "^6.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -35,6 +46,7 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
+    "typescript": "^5.1.6",
     "vite": "^5.3.4"
   }
 }
