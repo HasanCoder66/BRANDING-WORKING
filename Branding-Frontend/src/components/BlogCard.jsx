@@ -11,7 +11,7 @@ const BlogCard = ({ name, desc, imgUrl }) => {
         <Card.Img
           variant="top"
         //   src={blogImg1}
-          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fproject-management&psig=AOvVaw3mld-NCOzMp9hIW-9n1Gt4&ust=1723149188308000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDlrozd44cDFQAAAAAdAAAAABAE"
+          src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600"
           className="group-hover/item:rotate-3 duration-300 ease-out scale-110"
         />
       </div>

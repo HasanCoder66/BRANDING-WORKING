@@ -13,6 +13,8 @@ import CarouselCmp from "./CarouselCmp";
 import Contact from "./Contact";
 import MapLocation from "./MapLocation";
 import BlogCard from "./BlogCard";
+import TeamMatesCard from "./TeamMatesCard";
+import AllServiceCardCmp from "./AllServicesCard";
 import Footer from "./Footer";
 
 export {
@@ -31,5 +33,7 @@ export {
   Contact,
   MapLocation,
   BlogCard,
+  TeamMatesCard,
+  AllServiceCardCmp,
   Footer,
 };

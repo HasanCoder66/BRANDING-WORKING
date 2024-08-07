@@ -7,6 +7,7 @@ import Blog from "./pages/BlogPage/Blog";
 import Contact from "./pages/ContactPage/Contact";
 import About from "./pages/AboutPage/About";
 import { Footer, MobileNav, Nav } from "./components";
+import AllServices from "./pages/ServicesPage/Services";
 
 const Layout = () => {
   const [nav, setNav] = useState(false);
@@ -35,10 +36,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
-      // {
-      //   path: "/services",
-      // element: <AllServices />,
-      // },
+      {
+        path: "/services",
+      element: <AllServices />,
+      },
       {
         path: "/portfolio",
         element: <Portfolio />,

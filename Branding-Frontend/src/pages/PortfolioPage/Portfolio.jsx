@@ -13,9 +13,9 @@ const Portfolio = () => {
         <link rel="canonical" href="/portfolio" />
       </Helmet>
       <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {/* <BlogCard /> */}
+        {/* <BlogCard />
+        <BlogCard /> */}
       </div>
     </>
   );

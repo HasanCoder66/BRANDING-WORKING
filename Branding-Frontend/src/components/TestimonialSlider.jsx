@@ -124,22 +124,22 @@ const TestimonialSlider = () => {
     //   itemClass="carousel-item-padding-40-px"
     >
       <ClientReview
-        image="https://i0.wp.com/www.crazytips.org/wp-content/uploads/2018/06/PicsArt_06-17-05.03.08.jpg?ssl=1"
+        image="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600"
         role="Web Developer"
         name="Mukhtar"
       />
       <ClientReview
-        image="/images/c2.jpg"
+        image="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600"
         role="Mern Stack Developer"
         name="Hasan"
       />
       <ClientReview
-        image="/images/c1.jpg"
+        image="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600"
         role="NodeJs Developer"
         name="Ahsan"
       />
       <ClientReview
-        image="/images/c2.jpg"
+        image="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600"
         role="React Developer"
         name="Abdullah"
       />
