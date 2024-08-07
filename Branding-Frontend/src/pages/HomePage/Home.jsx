@@ -1,13 +1,16 @@
 import "./Home.css";
-// import BlogPage from "../BlogPage/Blog.jsx";
-// import ContactPage from "../ContactPage/ContactPage";
-// import About from "../../Components/About/About";
-// import ServiceSection from "../../Components/ServiceSection/ServiceSection";
 import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Button, Hero, ServiceSectionHead, ServicesCards, Testimonials } from "../../components";
+import {
+  Button,
+  Contact,
+  Hero,
+  ServiceSectionHead,
+  ServicesCards,
+  Testimonials,
+} from "../../components";
 
 const HomePage = () => {
   useEffect(() => {
@@ -79,15 +82,15 @@ const HomePage = () => {
           </div>
         </div>
 
-        <Testimonials />
-
+        {/* <Testimonials /> */}
+        <Contact />
       </div>
       {/* <ServiceSection /> 
        <div className="">
         <About />
       </div> 
        <BlogPage /> 
-       <ContactPage /> */}
+        */}
     </>
   );
 };

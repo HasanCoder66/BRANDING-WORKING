@@ -9,7 +9,10 @@ import ServicesCards from "./ServicesCards";
 import Testimonials from "./Testimonials";
 import TestimonialSlider from "./TestimonialSlider";
 import ClientReview from "./ClientReview";
-import CarouselCmp from './CarouselCmp'
+import CarouselCmp from "./CarouselCmp";
+import Contact from "./Contact";
+import MapLocation from "./MapLocation";
+import BlogCard from "./BlogCard";
 import Footer from "./Footer";
 
 export {
@@ -25,5 +28,8 @@ export {
   TestimonialSlider,
   ClientReview,
   CarouselCmp,
+  Contact,
+  MapLocation,
+  BlogCard,
   Footer,
 };

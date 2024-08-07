@@ -1,9 +1,21 @@
 import React from 'react'
-
-const Contact = () => {
+import { Helmet } from 'react-helmet-async'
+import { Contact } from '../../components'
+const ContactPage = () => {
   return (
-    <div>Contact</div>
+    <>
+    <Helmet>
+        <meta
+          name="description"
+          content="Get in touch: Fill the form to start a conversation "
+        />
+        <link rel='canonical' href='/contact'/>
+      </Helmet>
+    <div className='landingContainer min-h-[100vh] py-[90px] '>
+      <Contact />
+    </div>
+    </>
   )
 }
 
-export default Contact
+export default ContactPage
