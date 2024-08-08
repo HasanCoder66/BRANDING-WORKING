@@ -1,0 +1,28 @@
+/* In your CSS file or style tag */
+.carousel-container {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .carousel-item-padding-40-px {
+    padding: 0 40px;
+  }
+  
+  .react-multi-carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .react-multi-carousel-arrow {
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .react-multi-carousel-arrow:hover {
+    background: #ff0000;
+  }
+  

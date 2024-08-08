@@ -29,7 +29,6 @@ const TestimonialSlider = () => {
       autoPlay={true}
       autoPlaySpeed={5000}
       centerMode={false}
-      // infinite
       responsive={responsive}
       itemClass="carousel-item-padding-40-px"
       containerClass="carousel-container"
@@ -59,4 +58,3 @@ const TestimonialSlider = () => {
 };
 
 export default TestimonialSlider;
-
