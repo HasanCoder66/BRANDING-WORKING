@@ -34,7 +34,7 @@ const BlogCard = ({ name, desc, imgUrl }) => {
             variant="primary"
             className="text-white text-lg group-hover/item:text-theme-red duration-300 ease-out -translate-y-4"
           >
-            
+
             Read More <ArrowForwardIcon />
           </Button>
         </div>
@@ -44,3 +44,32 @@ const BlogCard = ({ name, desc, imgUrl }) => {
 };
 
 export default BlogCard;
+
+
+
+// import Card from 'react-bootstrap/Card';
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+
+// function BlogCard() {
+//   return (
+//     <Row xs={1} md={2} className="g-4">
+      
+//         <Col>
+//           <Card>
+//             <Card.Img variant="top" src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600" />
+//             <Card.Body>
+//               <Card.Title>Card title</Card.Title>
+//               <Card.Text>
+//                 This is a longer card with supporting text below as a natural
+//                 lead-in to additional content. This content is a little bit
+//                 longer.
+//               </Card.Text>
+//             </Card.Body>
+//           </Card>
+//         </Col>
+//     </Row>
+//   );
+// }
+
+// export default BlogCard;

@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
@@ -24,6 +21,10 @@ export default {
         "theme-yellow": "#fca311",
         "coral-light": "#FEF6F5",
       },
+      backgroundImage: {
+        "solution-bg-image": "url('/src/assets/solution-bg.jpg')",
+        "login-bg-image": "url('/src/assets/loginbg.jpg')",
+      },
       animation: {
         moveDown: "moveDown 0.7s ease-out 1",
       },
@@ -42,4 +43,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
