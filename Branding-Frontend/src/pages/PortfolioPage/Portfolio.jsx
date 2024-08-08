@@ -16,20 +16,20 @@ const Portfolio = () => {
       </Helmet>
       <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
         <CardGroup>
-        <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
-        {/* {blogCardData.map(({ name, desc, imgUrl }, index) => (
+          <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
+            {/* {blogCardData.map(({ name, desc, imgUrl }, index) => (
           ))} */}
-          <div
-            // key={index}
-            style={{ width: "307px", height: "381px" }}
-            className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
-          >
-            {/* name={name} desc={desc} imgUrl={imgUrl} */}
-            <BlogCard  />
-            <BlogCard  />
-            <BlogCard  />
+            <div
+              // key={index}
+              style={{ width: "320px", height: "400px" }}
+              className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
+            >
+              {/* name={name} desc={desc} imgUrl={imgUrl} */}
+              <BlogCard />
+              {/* <BlogCard  />
+            <BlogCard  /> */}
+            </div>
           </div>
-      </div>
         </CardGroup>
       </div>
     </>
@@ -38,14 +38,9 @@ const Portfolio = () => {
 
 export default Portfolio;
 
-
-
-
-
 // import React from "react";
 // import { BlogCard } from "../../components";
 // // import { blogCardData } from "../dummyData";
-
 
 // const Portfolio = () => {
 //   return (

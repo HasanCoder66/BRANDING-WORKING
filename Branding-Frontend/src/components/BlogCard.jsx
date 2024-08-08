@@ -55,7 +55,7 @@
 
 
 import React from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 // import blogImg1 from "../assets/images/blogImg1.jpeg";
@@ -82,12 +82,12 @@ const BlogCard = ({ name, desc, imgUrl }) => {
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet."}
           </Card.Text>
         </div>
-        <Button
+        <div
           variant="primary"
-          className="text-white text-base group-hover/item:text-theme-red duration-300 ease-out -translate-y-4"
+          className="text-white text-base group-hover/item:text-theme-red duration-300 ease-out -translate-y-8"
         >
           Read More <ArrowForwardIcon />
-        </Button>
+        </div>
       </Card.Body>
     </Card>
   );

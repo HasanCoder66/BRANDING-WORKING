@@ -1,9 +1,9 @@
 import React from "react";
-import data from './servicesData.js'
+import data from "./servicesData.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { AllServiceCardCmp } from "../../components";
+import { AllServiceCardCmp, BlogCard } from "../../components";
 
 const AllServices = () => {
   useEffect(() => {
@@ -30,27 +30,44 @@ const AllServices = () => {
   }, []);
   return (
     <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
-    <div data-aos="zoom-in-left" className="w-[100vw] ">
-      <img
-        src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
-        alt="image"
-        className="h-[50vh] w-[100%] object-cover	"
-      />
-    </div>
-    <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]">
-      <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] text-center font-bold">
-         Branding Hopes Provides You Theese Services
-      </h2>
+      <div data-aos="zoom-in-left" className="w-[100vw] ">
+        <img
+          src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
+          alt="image"
+          className="h-[50vh] w-[100%] object-cover	"
+        />
+      </div>
+      <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]">
+        <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] text-center font-bold">
+          Branding Hopes Provides You Theese Services
+        </h2>
+      </div>
+
+      {/* <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
+        <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
+          <div
+            // key={index}
+            style={{ width: "320px", height: "400px" }}
+            className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
+          >
+            {data.map((data) => (
+              // <AllServiceCardCmp data={data} />
+              <BlogCard data={data} />
+            ))}
+          </div>
+        </div>
+      </div> */}
+
       
-    </div>
-    <div className="">
+      <div className="">
       <div className="flex justify-evenly flex-wrap ">
         {data.map((data) => (
-          <AllServiceCardCmp data={data} />
+          // <AllServiceCardCmp data={data} />
+          <BlogCard data={data} />
         ))}
       </div>
     </div>
-  </div>
+    </div>
   );
 };
 
