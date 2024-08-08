@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { BlogCard } from "../../components";
+import data from '../ServicesPage/servicesData.js'
 
-import CardGroup from "react-bootstrap/CardGroup";
 const Portfolio = () => {
   return (
     <>
@@ -14,24 +14,19 @@ const Portfolio = () => {
         />
         <link rel="canonical" href="/portfolio" />
       </Helmet>
-      <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
-        <CardGroup>
+      {/* <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
           <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
-            {/* {blogCardData.map(({ name, desc, imgUrl }, index) => (
-          ))} */}
+            {data.map(({ data }, index) => (
             <div
-              // key={index}
-              style={{ width: "320px", height: "400px" }}
+              key={index}
+              style={{ width: "350px", height: "381px" }}
               className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
             >
-              {/* name={name} desc={desc} imgUrl={imgUrl} */}
-              <BlogCard />
-              {/* <BlogCard  />
-            <BlogCard  /> */}
+              <BlogCard data={data}/>
             </div>
+          ))}
           </div>
-        </CardGroup>
-      </div>
+      </div> */}
     </>
   );
 };

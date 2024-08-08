@@ -85,12 +85,6 @@ const HomePage = () => {
         {/* <Testimonials /> */}
         <Contact />
       </div>
-      {/* <ServiceSection /> 
-       <div className="">
-        <About />
-      </div> 
-       <BlogPage /> 
-        */}
     </>
   );
 };

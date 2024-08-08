@@ -33,7 +33,7 @@
 }
 
 .card-container .pro {
-	color: #231E39;
+	color: #14213d;
 	background-color: #fca311;
 	border-radius: 3px;
 	font-size: 14px;
@@ -54,9 +54,10 @@ button.primary {
 	background-color: #fca311;
 	border: 1px solid #e5e5e5;
 	border-radius: 3px;
-	color: #fafafa;
+	color: #14213d;
+	font-weight: bold;
 	font-family: Montserrat, sans-serif;
-	font-weight: 500;
+	font-weight: 700;
 	padding: 10px 25px;
 }
 

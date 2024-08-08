@@ -1,5 +1,45 @@
 const data = [
   {
+    id: "10",
+    buttonContent: "View Packages",
+    imgUrl:
+      "https://img.freepik.com/free-photo/one-person-typing-laptop-office-generated-by-ai_188544-39272.jpg?size=626&ext=jpg&uid=R135466208&ga=GA1.1.1540570184.1698578526&semt=sph",
+    title: "English, Arabic, Urdu Typing",
+    desc:
+      "Seamlessly communicate with your audience in their preferred language with our typing services, ensuring your message is clear and culturally relevant. ",
+    // link: "/packages/typing",
+  },
+  {
+    id: "9",
+    buttonContent: "View Packages",
+    imgUrl:
+      "https://img.freepik.com/free-vector/writer-work-attributes-accessories-tools-isometric-horizontal-web-banner-with-books-typewriter-glasses-pen_1284-55418.jpg?size=626&ext=jpg&uid=R135466208&ga=GA1.1.1540570184.1698578526&semt=ais",
+    title: "Copywriting",
+    desc:
+      "Craft compelling copy that captures attention, conveys your brand message effectively, and drives action, whether it's for ads, websites, or campaigns. ",
+    // link: "/packages/seo",
+  },
+  {
+    id: "4",
+    imgUrl:
+      "https://www.shutterstock.com/image-vector/social-media-management-network-engagement-260nw-779194723.jpg",
+    buttonContent: "View Packages",
+    title: "Social Media Management",
+    desc:
+      "Build a strong social presence and foster meaningful connections with your audience through strategic content, engagement, and analytics-driven insights. ",
+    link: "/packages/smm",
+  },
+  {
+    id: "5",
+    buttonContent: "View Packages",
+    imgUrl:
+      "https://img.freepik.com/premium-photo/person-manage-search-engine-optimization-seo-digital-marketing-with-social-media-content_34141-1044.jpg?w=826",
+    title: "Search Engine Optimization (SEO)",
+    desc:
+      "Increase your online visibility and drive organic traffic to your website with our proven SEO strategies tailored to your business goals. ",
+    link: "/packages/seo",
+  },
+  {
     id: "1",
     // Icon : <CodeIcon />,
     imgUrl:
@@ -30,26 +70,8 @@ const data = [
       "From logos to marketing collateral, our graphic design services help you stand out with visually compelling assets that reflect your brand identity.",
     link: "/packages/graphicdesign",
   },
-  {
-    id: "4",
-    imgUrl:
-      "https://www.shutterstock.com/image-vector/social-media-management-network-engagement-260nw-779194723.jpg",
-    buttonContent: "View Packages",
-    title: "Social Media Management",
-    desc:
-      "Build a strong social presence and foster meaningful connections with your audience through strategic content, engagement, and analytics-driven insights. ",
-    link: "/packages/smm",
-  },
-  {
-    id: "5",
-    buttonContent: "View Packages",
-    imgUrl:
-      "https://img.freepik.com/premium-photo/person-manage-search-engine-optimization-seo-digital-marketing-with-social-media-content_34141-1044.jpg?w=826",
-    title: "Search Engine Optimization (SEO)",
-    desc:
-      "Increase your online visibility and drive organic traffic to your website with our proven SEO strategies tailored to your business goals. ",
-    link: "/packages/seo",
-  },
+  
+
   {
     id: "6",
     buttonContent: "View Packages",
@@ -80,26 +102,8 @@ const data = [
       "Establish thought leadership and drive engagement with regular blog posts that provide value to your audience and keep them coming back for more.",
     // link: "/packages/seo",
   },
-  {
-    id: "9",
-    buttonContent: "View Packages",
-    imgUrl:
-      "https://img.freepik.com/free-vector/writer-work-attributes-accessories-tools-isometric-horizontal-web-banner-with-books-typewriter-glasses-pen_1284-55418.jpg?size=626&ext=jpg&uid=R135466208&ga=GA1.1.1540570184.1698578526&semt=ais",
-    title: "Copywriting",
-    desc:
-      "Craft compelling copy that captures attention, conveys your brand message effectively, and drives action, whether it's for ads, websites, or campaigns. ",
-    // link: "/packages/seo",
-  },
-  {
-    id: "10",
-    buttonContent: "View Packages",
-    imgUrl:
-      "https://img.freepik.com/free-photo/one-person-typing-laptop-office-generated-by-ai_188544-39272.jpg?size=626&ext=jpg&uid=R135466208&ga=GA1.1.1540570184.1698578526&semt=sph",
-    title: "English, Arabic, Urdu Typing",
-    desc:
-      "Seamlessly communicate with your audience in their preferred language with our typing services, ensuring your message is clear and culturally relevant. ",
-    // link: "/packages/seo",
-  },
+ 
+  
 ];
 
 export default data;

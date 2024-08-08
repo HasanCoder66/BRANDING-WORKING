@@ -42,33 +42,30 @@ const AllServices = () => {
           Branding Hopes Provides You Theese Services
         </h2>
       </div>
-
-      {/* <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
-        <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
+      <div className="blogCardCont p-16 flex flex-wrap  items-center justify-evenly ">
+        {data.map((data, index) => (
           <div
-            // key={index}
-            style={{ width: "320px", height: "400px" }}
+            key={index}
+            style={{ width: "350px", height: "400px" }}
             className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
           >
-            {data.map((data) => (
-              // <AllServiceCardCmp data={data} />
-              <BlogCard data={data} />
-            ))}
+            <BlogCard data={data} />
+            {/* name={name} desc={desc} imgUrl={imgUrl} */}
           </div>
-        </div>
-      </div> */}
-
-      
-      <div className="">
-      <div className="flex justify-evenly flex-wrap ">
-        {data.map((data) => (
-          // <AllServiceCardCmp data={data} />
-          <BlogCard data={data} />
         ))}
       </div>
-    </div>
     </div>
   );
 };
 
 export default AllServices;
+
+{
+  /* <div className="">
+      <div className="flex justify-evenly flex-wrap ">
+        {data.map((data) => (
+          <AllServiceCardCmp data={data} />
+        ))}
+      </div>
+    </div> */
+}
