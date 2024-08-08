@@ -15,6 +15,7 @@ import MapLocation from "./MapLocation";
 import BlogCard from "./BlogCard";
 import TeamMatesCard from "./TeamMatesCard";
 import AllServiceCardCmp from "./AllServicesCard";
+import PackageCard from "./PackageCard";
 import Footer from "./Footer";
 
 export {
@@ -35,5 +36,6 @@ export {
   BlogCard,
   TeamMatesCard,
   AllServiceCardCmp,
+  PackageCard,
   Footer,
 };

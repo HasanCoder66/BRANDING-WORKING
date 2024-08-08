@@ -2,12 +2,13 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/HomePage/Home";
 import Portfolio from "./pages/PortfolioPage/Portfolio";
-import Service from "./pages/ServicesPage/Services";
+// import Service from "./pages/ServicesPage/Services";
 import Blog from "./pages/BlogPage/Blog";
 import Contact from "./pages/ContactPage/Contact";
 import About from "./pages/AboutPage/About";
 import { Footer, MobileNav, Nav } from "./components";
 import AllServices from "./pages/ServicesPage/Services";
+import Packages from "./pages/PackagesPage/Packages";
 
 const Layout = () => {
   const [nav, setNav] = useState(false);
@@ -57,8 +58,8 @@ const router = createBrowserRouter([
       //   element: <GetConsultant />,
       // },
       {
-        path: "/services/:id",
-        element: <Service />,
+        path: "/packages/:id",
+        element: <Packages />,
       },
     ],
   },
