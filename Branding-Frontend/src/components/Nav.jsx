@@ -34,9 +34,9 @@ const Nav = ({ openNav }) => {
             <Link to="/about">
               <div className="nav-link text-[#fca311]">About</div>
             </Link>
-            <Link to="/portfolio">
+            {/* <Link to="/portfolio">
               <div className="nav-link text-[#fca311]">Portfolio</div>
-            </Link>
+            </Link> */}
             {/* <Link to="/blog">
               <div className="nav-link text-[#fca311]">Blog</div>
             </Link> */}

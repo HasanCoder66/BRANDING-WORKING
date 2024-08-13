@@ -3,6 +3,7 @@ import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 import "./styles/Packages.css"
+import {Link} from 'react-router-dom'
 
 const PackageCard = ({ data }) => {
 
@@ -38,9 +39,12 @@ const PackageCard = ({ data }) => {
                     <CheckCircleOutlinedIcon className='text-white' /> 100% Approval Assurance
                 </div>
                 <div className="btns flex items-center justify-evenly m-[15px]">
+                    <Link to="/contact">
                     <button className='text-[#fca311]  border-[1px] border-[#14213d] py-[5px] px-[30px] flex items-center gap-[5px] rounded-full transition-all ease-in-out duration-300 hover:bg-[#14213d]  hover:border-none'>
                         <ShoppingCartIcon /> PURCHASE
                     </button>
+                    </Link>
+
                     <div>
                         <p className='text-[#6c6565] text-[12px]'>Click here to</p>
                         <p className='text-[#14213d] text-[12px]'><SmsOutlinedIcon /> Live chat</p>
