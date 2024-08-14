@@ -96,19 +96,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MarkunreadIcon from "@mui/icons-material/Markunread";
@@ -191,7 +178,6 @@ const Footer = () => {
                   to={"/services"}
                   className="text-white text-lg hover:text-theme-red"
                 >
-                  
                   Services
                 </Link>
               </li>
@@ -213,7 +199,7 @@ const Footer = () => {
                   About
                 </Link>
               </li>
-            
+
               <li>
                 <Link
                   to={"/blog"}
@@ -242,7 +228,6 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            
           </div>
         </div>
         <div className="w-full md:w-1/3 ">

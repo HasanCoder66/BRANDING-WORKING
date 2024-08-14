@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MapLocation from "./MapLocation";
 
-
 function Contact() {
   const form = useRef();
   const [email, setEmail] = useState("");
@@ -232,4 +231,3 @@ function Contact() {
 }
 
 export default Contact;
-

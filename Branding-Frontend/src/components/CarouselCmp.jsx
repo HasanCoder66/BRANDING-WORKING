@@ -1,28 +1,25 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-
-
 const CarouselCmp = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
-      slidesToSlide:1// optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      slidesToSlide:1 // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1 // optional, default to 1.
-    }
+      slidesToSlide: 1, // optional, default to 1.
+    },
   };
   return (
-   
     <Carousel
       swipeable={false}
       draggable={false}
@@ -46,7 +43,7 @@ const CarouselCmp = () => {
       <div className="text-white">Item 3</div>
       <div className="text-white">Item 4</div>
     </Carousel>
-  )
-}
+  );
+};
 
-export default CarouselCmp
+export default CarouselCmp;

@@ -5,12 +5,9 @@ import { Link } from "react-router-dom";
 
 const BlogCard = ({ data }) => {
   // console.log(data.imgUrl)
-  const {id, desc, imgUrl, title, buttonContent, link} = data
+  const { id, desc, imgUrl, title, buttonContent, link } = data;
   return (
-    <Card
-      key={id}
-      className="w-[100%]  object-contain overflow-hidden"
-    >
+    <Card key={id} className="w-[100%]  object-contain overflow-hidden">
       <Card.Img
         // variant="top"
         src={imgUrl}

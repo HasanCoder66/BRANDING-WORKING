@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Button from "./Button";
 import TextEffect from "./TextEffects";
 
-
 const container = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
@@ -41,7 +40,6 @@ const imgVariant = {
 const Hero = () => {
   return (
     <>
-      
       <div className="landingContainer overflow-x-hidden w-[100%]">
         <div className="wrapper w-[100%] px-[80px]  flex xl:flex-row flex-col item-center justify-between text-center uppercase font-['Poppins', sans-serif'] mt-[90px]">
           <motion.div
@@ -63,7 +61,7 @@ const Hero = () => {
               <span className="text-[#fca311]">
                 Turning Your{" "}
                 <span>
-                <TextEffect className='landingTitle'/>{" "}
+                  <TextEffect className="landingTitle" />{" "}
                 </span>
                 <br />{" "}
               </span>
