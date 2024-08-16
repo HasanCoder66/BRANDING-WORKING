@@ -2,6 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { TeamMatesCard } from "../../components";
 import { useEffect } from "react";
 import AOS from "aos";
+import amc from '../../assets/amc.jpg'
+import munna from '../../assets/munna.jpg'
+import hasan from '../../assets/hasan.png'
+import rizzwan from '../../assets/rizz.jpeg'
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
@@ -67,7 +71,7 @@ const AboutPage = () => {
           <div className="flex justify-evenly flex-wrap gap-[15px]">
             <div data-aos="zoom-in-right">
               <TeamMatesCard
-                imgUrl="https://avatars.githubusercontent.com/u/121274660?v=4"
+                imgUrl={rizzwan}
                 name="Rizzwan Ahmed"
                 city="Karachi Pakistan"
                 Role="Full Stack Developer "
@@ -76,6 +80,7 @@ const AboutPage = () => {
             </div>
             <div data-aos="zoom-in">
               <TeamMatesCard
+                // imgUrl={hasan}
                 imgUrl="https://yt3.googleusercontent.com/y03yJ4RBXAk6ngMs-hFHRwtPDtIFiA83YWDNzqo-DBg4dAvERHCu_y-xuaganp0eM0PTskOQyg=s160-c-k-c0x00ffffff-no-rj"
                 name="Muhammad Hasan"
                 city="Karachi Pakistan"
@@ -85,8 +90,7 @@ const AboutPage = () => {
             </div>
             <div data-aos="zoom-out-up">
               <TeamMatesCard
-                imgUrl="https://scontent.fkhi17-1.fna.fbcdn.net/v/t39.30808-6/305535406_131917102916717_6182782624124545240_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHYc1tRXjieO-hx7Of--eXT1VHiTDWZAdjVUeJMNZkB2D2XUoqeyS1A4M08oeAvHdbbFE0BCe4z5DzKMA7HpF2X&_nc_ohc=p8xAg-lIvPoQ7kNvgHgteuk&_nc_ht=scontent.fkhi17-1.fna&oh=00_AYAWWhI-0GUtTMXGo-XSrcOVJ7GkIMtqpAYFci1pl7kltg&oe=66B9BD01"
-                name="Abdul Majeed "
+                imgUrl={amc}
                 city="Karachi Pakistan"
                 Role="Web Developer || Full stack Developer "
                 buttonContent="view more about"
@@ -94,7 +98,7 @@ const AboutPage = () => {
             </div>
             <div data-aos="zoom-out-up">
               <TeamMatesCard
-                imgUrl="https://scontent.fkhi17-1.fna.fbcdn.net/v/t39.30808-6/426701355_4621095901449668_5220658541142648378_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE3q4gW8uxmLwigI_orWdkBvaFYqeo7YD29oVip6jtgPWKXoclEB7sBW70E5MkmRQxGDsJ-vtsDXv3y6XGCYatk&_nc_ohc=QdsyPBQuSSwQ7kNvgETUi1k&_nc_ht=scontent.fkhi17-1.fna&oh=00_AYBx__JymKDih7Rga7P9nw2BHRuRinF4NqwWJy2WHLkZZQ&oe=66B9CCB7"
+                imgUrl={munna}
                 name="Mukhtar Ahmed "
                 city="Karachi Pakistan"
                 Role="Graphic Designer "
