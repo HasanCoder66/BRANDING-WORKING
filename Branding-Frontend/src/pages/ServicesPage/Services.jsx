@@ -42,11 +42,11 @@ const AllServices = () => {
           Branding Hopes Provides You Theese Services
         </h2>
       </div>
-      <div className="blogCardCont p-16 flex flex-wrap  items-center justify-evenly ">
+      <div className=" blogCardCont p-16 flex flex-wrap  items-center justify-evenly ">
         {data.map((data, index) => (
           <div
             key={index}
-            style={{ width: "350px", height: "400px" }}
+            style={{ width: "350px", height: "420px" }}
             className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
           >
             <BlogCard data={data} />
