@@ -41,7 +41,9 @@ const ContactPage = () => {
         data-aos-anchor-placement="top-bottom"
         className="landingContainer min-h-[100vh] py-[90px] "
       >
-        <Contact />
+       <div className="pt-[6rem]">
+       <Contact />
+       </div>
       </div>
     </>
   );

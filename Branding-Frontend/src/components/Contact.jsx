@@ -37,7 +37,7 @@ function Contact() {
   return (
     <>
       <div className="  landingContainer flex items-top justify-between min-h-[500px] sm:items-center sm:pt-0 sm:pb-0 w-[100%]]">
-        <div className=" mx-auto my-auto  sm:px-6 w-[100vw] min-h-[370px] lg:px-8  pb-[8rem]">
+        <div className=" mx-auto my-auto  sm:px-6 w-[100vw] min-h-[370px] lg:px-8  pb-[4rem]">
           <div className="overflow-hidden lg:px-[120px] ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
               <div className="p-6 mr-2 bg-[#e5e5e5] sm:rounded-lg">
