@@ -52,8 +52,8 @@ const Packages = () => {
 
       <div className="serviceContainer landingContainer">
         <div className="serviceWrapper py-[150px] md:px-[76px]">
-          <div className="mb-[30px] px-[20px]">
-            <h1 className="text-[40px] font-bold text-white">
+          <div className=" px-[20px] mb-[2rem]">
+            <h1 className="text-[40px] font-bold text-white uppercase">
               <span className="text-[#fca311]">Affordable</span> Packages for
               Your <span className="text-[#fca311]">Business</span>
             </h1>
@@ -62,7 +62,7 @@ const Packages = () => {
               business demands while meeting your budget.
             </p>
           </div>
-          <div className="flex flex-wrap justify-evenly">
+          <div className="flex flex-wrap justify-evenly pt-[4rem]">
             {data.map((item, index) => (
               <PackageCard data={item} key={index} />
             ))}
