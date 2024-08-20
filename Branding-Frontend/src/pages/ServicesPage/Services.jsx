@@ -37,12 +37,12 @@ const AllServices = () => {
           className="h-[50vh] w-[100%] object-cover	"
         />
       </div>
-      <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]">
-        <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] text-center font-bold">
-          Branding Hopes Provides You These Services
+      <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]  pt-[2rem]">
+        <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] uppercase text-center font-bold">
+          We Provides You These <span className="text-white">Services</span>
         </h2>
       </div>
-      <div className=" blogCardCont p-16 flex flex-wrap  items-center justify-evenly ">
+      <div className=" blogCardCont p-16 flex flex-wrap  pt-[3rem] items-center justify-evenly ">
         {data.map((data, index) => (
           <div
             key={index}

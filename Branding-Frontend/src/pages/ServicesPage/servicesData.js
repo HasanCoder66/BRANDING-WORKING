@@ -7,7 +7,7 @@ import SEO from "../../assets/servicesImages/search engine optimization.jpg";
 import SocialMedia from "../../assets/servicesImages/social media.jpg";
 import VideoAnimation from "../../assets/servicesImages/video animation.jpg";
 import webDev from "../../assets/servicesImages/web design & development.jpg";
-import webdesign from "../../assets/servicesImages/web design.jpg";
+// import webdesign from "../../assets/servicesImages/web design.jpg";
 
 const data = [
   {
