@@ -102,7 +102,8 @@ import MarkunreadIcon from "@mui/icons-material/Markunread";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+// import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedinIcon from "@mui/icons-material/LinkedIn";
 import InterestsIcon from "@mui/icons-material/Interests";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { Link } from "react-router-dom";
@@ -126,7 +127,7 @@ const Footer = () => {
             />
             <div>
               <p className="text-lg">MON TO SUN: 24/7</p>
-              <p className="text-xl font-bold">UK +</p>
+              {/* <p className="text-xl font-bold">UK +</p> */}
             </div>
           </div>
           <div className="flex items-center gap-3 mb-10">
@@ -147,10 +148,27 @@ const Footer = () => {
             <div>
               <p className="text-lg">SOCIAL NETWORK</p>
               <div className="flex items-center gap-5">
-                <XIcon />
-                <FacebookIcon />
-                <InstagramIcon />
-                <YouTubeIcon />
+                {/* <XIcon /> */}
+                <a
+                  href="https://web.facebook.com/profile.php?id=61557738595018"
+                  target="_blank"
+                >
+                  <FacebookIcon />
+                </a>
+                <a
+                  href="https://www.instagram.com/brandinghopes/"
+                  target="_blank"
+                >
+                  <InstagramIcon />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/branding-hopes-304207324/"
+                  target="_blank"
+                >
+                  <LinkedinIcon />
+                </a>
+
+                {/* <YouTubeIcon /> */}
               </div>
             </div>
           </div>

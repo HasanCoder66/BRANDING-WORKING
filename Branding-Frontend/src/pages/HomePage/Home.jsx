@@ -52,7 +52,7 @@ const HomePage = () => {
         <ServiceSectionHead />
         <ServicesCards />
 
-        <div className="landingContainer about-page text-center">
+        <div className="landingContainer about-page text-center pt-[4rem] pb-[4rem]">
           <div className="lg:p-[100px] py-[30px]">
             <div className=" m-auto px-6 md:px-12 xl:px-6">
               <div className="md:flex md:gap-6 lg:items-center lg:gap-12">
@@ -64,8 +64,8 @@ const HomePage = () => {
                   />
                 </div>
                 <div className="md:7/12 lg:w-6/12">
-                  <h2 className="text-2xl text-[#fca311] font-bold md:text-4xl">
-                    About Branding Hopes
+                  <h2 className=" text-[#fca311] lg:text-[42px] font-bold md:text-4xl uppercase">
+                    About <span className="text-[#ffffff]">Branding</span> Hopes
                   </h2>
                   <p className="text mt-6 text-white text-center">
                     At Branding Hopes, we are more than just a digital marketing

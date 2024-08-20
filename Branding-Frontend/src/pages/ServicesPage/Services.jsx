@@ -39,7 +39,7 @@ const AllServices = () => {
       </div>
       <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]">
         <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] text-center font-bold">
-          Branding Hopes Provides You Theese Services
+          Branding Hopes Provides You These Services
         </h2>
       </div>
       <div className=" blogCardCont p-16 flex flex-wrap  items-center justify-evenly ">

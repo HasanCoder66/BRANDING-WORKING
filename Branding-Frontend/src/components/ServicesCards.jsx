@@ -8,13 +8,13 @@ import Button from "./Button";
 
 const ServicesCards = () => {
   return (
-    <div className=" md:pt-[2rem] pb-[5rem]">
+    <div className=" md:pt-[2rem]">
       <p className=" heading ">
-        Our <span className="text-[#fca311]">Services</span>
+        Our Key <span className="text-[#fca311]">Services</span>
       </p>
       <div className="pt-[2rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto items-center gap-[3rem] mt-[4rem] text-white ">
         <div data-aos="fade-right">
-          <div className="bg-[#fca311] hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase font-semibold text-center p-[2rem]">
+          <div className=" h-[450px] bg-[#fca311] hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase font-semibold text-center p-[2rem]">
             <CodeBracketSquareIcon className="w-[6rem] h-[6rem] mx-auto text-[#14213d] " />
             <h1 className="text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]   ">
               Web Development
@@ -28,7 +28,7 @@ const ServicesCards = () => {
         </div>
 
         <div data-aos="zoom-in" data-aos-delay="300">
-          <div className="bg-white hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase font-semibold text-center p-[2rem]">
+          <div className="bg-white h-[450px] hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase font-semibold text-center p-[2rem]">
             <RocketLaunchIcon className="w-[6rem] h-[6rem] mx-auto text-[#fca311] " />
             <h1 className=" text-[#14213d] text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]   ">
               Digital Marketing
@@ -42,7 +42,7 @@ const ServicesCards = () => {
         </div>
 
         <div data-aos="fade-left" data-aos-delay="500">
-          <div className="bg-[#14213d] hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase font-semibold text-center p-[2rem]">
+          <div className="bg-[#14213d] h-[450px] hover:scale-110 transform transition-all duration-300 hover:-rotate-6 uppercase font-semibold text-center p-[2rem]">
             <CommandLineIcon className="w-[6rem] h-[6rem] mx-auto text-white " />
             <h1 className="text-[20px] md:text-[30px] mt-[1.5rem] mb-[1.5rem]   ">
               Logo Design
@@ -93,12 +93,10 @@ const ServicesCards = () => {
               </p>
             </div>
           </div> */}
-
-
       </div>
-        <div className="flex justify-center pt-[2.5rem]">
-          <Button text=" More Services" link="/services" />
-        </div>
+      <div className="flex justify-center pt-[4rem]">
+        <Button text=" View More Services" link="/services" />
+      </div>
     </div>
   );
 };

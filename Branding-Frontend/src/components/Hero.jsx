@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <>
       <div className="landingContainer overflow-x-hidden w-[100%]">
-        <div className="wrapper w-[100%] px-[80px]  flex xl:flex-row flex-col item-center justify-between text-center uppercase font-['Poppins', sans-serif'] mt-[90px]">
+        <div className="wrapper w-[100%] px-[80px]  flex xl:flex-row flex-col item-center justify-between text-center uppercase font-['Poppins', sans-serif'] mt-[80px]">
           <motion.div
             variants={container}
             initial="hidden"
@@ -82,7 +82,7 @@ const Hero = () => {
               <Button text="Our Services" link="/services" />
             </motion.div>
           </motion.div>
-          <div className="right flex-1 flex items-center justify-center ">
+          {/* <div className="right flex-1 flex items-center justify-center ">
             <motion.div
               variants={imgVariant}
               initial="initial"
@@ -95,7 +95,7 @@ const Hero = () => {
                 className="w-[100%] object-contain"
               />
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
