@@ -50,12 +50,12 @@ const AboutPage = () => {
             className="h-[50vh] w-[100%] object-cover	"
           />
         </div>
-        <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]">
-          <h2 className="text-[3.5rem] tracking-widest	 text-[#fca311] text-center font-bold">
-            About Branding Hopes
+        <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem] pt-[2rem]">
+          <h2 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
+            About Branding <span className="text-white">Hopes</span>
           </h2>
           <p className="text text-white text-center">
-            At Branding Hopes, we transcend the conventional role of a digital
+            At <span className="text-[#fca311]">Branding Hopes</span>, we transcend the conventional role of a digital
             marketing agency. We are your steadfast partners, committed to
             propelling your success to new heights. Fueled by an unwavering
             passion for creativity and an unyielding dedication to tangible
@@ -68,7 +68,7 @@ const AboutPage = () => {
         </div>
 
         <div>
-          <div className="flex justify-evenly flex-wrap gap-[15px]">
+          <div className="flex justify-evenly flex-wrap gap-[15px] pt-[6rem]">
             <div data-aos="zoom-in-right">
               <TeamMatesCard
                 imgUrl={rizzwan}
@@ -91,6 +91,7 @@ const AboutPage = () => {
             <div data-aos="zoom-out-up">
               <TeamMatesCard
                 imgUrl={amc}
+                name="Abdul Majeed "
                 city="Karachi Pakistan"
                 Role="Web Developer || Full stack Developer "
                 buttonContent="view more about"
