@@ -18,6 +18,7 @@ import AllServiceCardCmp from "./AllServicesCard";
 import PackageCard from "./PackageCard";
 import CTA from './CTA'
 import ButtonTwo from "./ButtonTwo";
+import Business from "./Bussiness";
 import Footer from "./Footer";
 
 export {
@@ -41,5 +42,7 @@ export {
   PackageCard,
   CTA,
   ButtonTwo,
+  Business,
   Footer,
 };
+
