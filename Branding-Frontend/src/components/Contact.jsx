@@ -39,7 +39,7 @@ function Contact() {
       <div className="  landingContainer flex items-top justify-between min-h-[500px] sm:items-center sm:pt-0 sm:pb-0 w-[100%]]">
         <div className=" mx-auto my-auto  sm:px-6 w-[100vw] min-h-[370px] lg:px-8  pb-[4rem]">
           <div className="overflow-hidden lg:px-[120px] ">
-            <div className="pb-[3rem]">
+            <div className="pb-[3rem] pt-[4rem]">
               <h1 className="text-[2rem] text-white font-bold uppercase">
                 Any Confusion ? Just Email Us. <span className="text-[#fca311]">Thank You For Your Trust!</span>
               </h1>

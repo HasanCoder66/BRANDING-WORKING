@@ -16,6 +16,8 @@ import BlogCard from "./BlogCard";
 import TeamMatesCard from "./TeamMatesCard";
 import AllServiceCardCmp from "./AllServicesCard";
 import PackageCard from "./PackageCard";
+import CTA from './CTA'
+import ButtonTwo from "./ButtonTwo";
 import Footer from "./Footer";
 
 export {
@@ -37,5 +39,7 @@ export {
   TeamMatesCard,
   AllServiceCardCmp,
   PackageCard,
+  CTA,
+  ButtonTwo,
   Footer,
 };

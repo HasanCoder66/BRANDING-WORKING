@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import {
   Button,
+  CTA,
   Contact,
   Hero,
   ServiceSectionHead,
@@ -83,6 +84,7 @@ const HomePage = () => {
         </div>
 
         {/* <Testimonials /> */}
+        <CTA />
         <Contact />
       </div>
     </>
