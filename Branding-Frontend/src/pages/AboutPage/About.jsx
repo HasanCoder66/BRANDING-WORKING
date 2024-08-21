@@ -50,7 +50,9 @@ const AboutPage = () => {
             className="h-[50vh] w-[100%] object-cover	"
           />
         </div>
-        <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem] pt-[2rem]">
+        {/*  */}
+        {/* md:7/12 lg:w-6/12  */}
+        <div className="flex flex-col items-center gap-[2rem] lg:px-[8rem] pt-[2rem]">
           <h2 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
             About Branding <span className="text-white">Hopes</span>
           </h2>
