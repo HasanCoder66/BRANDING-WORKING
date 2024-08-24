@@ -50,18 +50,21 @@ const Hero = () => {
           >
             <motion.p
               variants={item}
-              className="subText text-[1.2rem] font-normal text-[#e5e5e5]"
+              className="subText text-[1.5rem] font-normal text-[#e5e5e5]"
             >
-              Empower Your Presence with Branding Hopes
+              {/* Empower Your Presence with Branding Hopes */}
+              {/* Boost Your Brand with Branding Hopes */}
+              Build Your Brand with Branding Hopes
             </motion.p>
             <motion.div
               variants={item}
-              className="landingTitle text-7xl font-bold text-white"
+              className="landingTitle text-7xl font-bold text-[#fca311]"
             >
               <span className="text-[#fca311]">
                 Turning Your{" "}
-                <span>
-                  <TextEffect className="landingTitle" />{" "}
+                <br />
+                <span className="">
+                  <TextEffect className="landingTitle " />{" "}
                 </span>
                 <br />{" "}
               </span>
@@ -69,10 +72,15 @@ const Hero = () => {
             </motion.div>
             <motion.p
               variants={item}
-              className="subText text-[1.2rem] font-normal text-[#e5e5e5]"
+              className="subText text-[1.5rem] font-normal text-[#e5e5e5] mb-[-35px]"
             >
-              Where Imagination Meets Innovation in Web Development, Design,
-              SEO, and Digital Mastery
+              Where Imagination Meets Innovation in
+            </motion.p>
+            <motion.p
+              variants={item}
+              className="subText text-[1.5rem] font-normal text-[#e5e5e5]"
+            >
+              Web Development, Design, SEO, and Digital Mastery
             </motion.p>
             <motion.div
               variants={item}
