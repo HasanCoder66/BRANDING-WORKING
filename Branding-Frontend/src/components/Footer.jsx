@@ -29,7 +29,7 @@ const Footer = () => {
             />
             <div>
               <p className="text-lg">MON TO SUN: 24/7</p>
-              <p className="text-xl font-bold">PK +92 346 2046 684</p>
+              <p className="text-xl font-bold">PK +92 346 2046 684 </p>
             </div>
           </div>
           <div className="flex items-center gap-3 mb-10">
