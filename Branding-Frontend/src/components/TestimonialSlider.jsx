@@ -34,7 +34,7 @@ const TestimonialSlider = () => {
       containerClass="carousel-container"
     >
       <ClientReview
-        image="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image="https://yt3.ggpht.com/y03yJ4RBXAk6ngMs-hFHRwtPDtIFiA83YWDNzqo-DBg4dAvERHCu_y-xuaganp0eM0PTskOQyg=s176-c-k-c0x00ffffff-no-rj"
         role="Web Developer"
         name="Mukhtar"
       />

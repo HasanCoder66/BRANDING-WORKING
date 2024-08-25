@@ -19,6 +19,8 @@ import PackageCard from "./PackageCard";
 import CTA from './CTA'
 import ButtonTwo from "./ButtonTwo";
 import Business from "./Bussiness";
+import BlogView from "./BlogView";
+import BlogCmpHead from "./BlogCmpHead";
 import Footer from "./Footer";
 
 export {
@@ -43,6 +45,8 @@ export {
   CTA,
   ButtonTwo,
   Business,
+  BlogView,
+  BlogCmpHead,
   Footer,
 };
 

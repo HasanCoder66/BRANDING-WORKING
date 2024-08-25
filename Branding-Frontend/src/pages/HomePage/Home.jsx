@@ -85,7 +85,7 @@ const HomePage = () => {
         </div>
 
         <Business />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <CTA />
         <Contact />
       </div>
