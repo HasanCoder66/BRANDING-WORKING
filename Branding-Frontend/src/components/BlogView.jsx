@@ -70,7 +70,10 @@ function BlogView() {
       // onSubmit={sendEmail}
     >
       <div className="flex flex-col ">
-        <label for="name" className="pl-[0.75rem] font-bold text-2xl text-[#fca311] mb-2">
+        <label
+          for="name"
+          className="pl-[0.75rem] font-bold text-2xl text-[#fca311] mb-2"
+        >
           Blog Title
         </label>
         <input
@@ -83,10 +86,12 @@ function BlogView() {
         />
       </div>
 
-      
       <div className="flex flex-col mt-2">
-        <label for="tel" className="pl-[0.75rem] font-bold text-[#fca311] text-2xl">
-         Blog Content
+        <label
+          for="tel"
+          className="pl-[0.75rem] font-bold text-[#fca311] text-2xl"
+        >
+          Blog Content
         </label>
 
         <textarea
@@ -100,7 +105,10 @@ function BlogView() {
         ></textarea>
       </div>
       <div className="flex flex-col mt-2">
-        <label for="tel" className="pl-[0.75rem] font-bold text-[#fca311] text-2xl">
+        <label
+          for="tel"
+          className="pl-[0.75rem] font-bold text-[#fca311] text-2xl"
+        >
           Blog's Description
         </label>
 

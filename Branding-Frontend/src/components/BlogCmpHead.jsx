@@ -10,10 +10,8 @@ const BlogCmpHead = () => {
         <p className="text-white  text-center mb-[1rem]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
           facilis fuga vero dignissimos explicabo sit, re
-
         </p>
       </div>
-
     </div>
   );
 };
