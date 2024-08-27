@@ -1,3 +1,6 @@
+// Style file ====>
+
+
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/HomePage/Home";
