@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { isRouteErrorResponse, Link } from "react-router-dom";
 
-function Dropdown({ closeNav }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function Dropdown({ setIsOpen, isOpen }) {
+  console.log(isOpen);
   const handleMouseEnter = () => setIsOpen(true);
   const handleMouseLeave = () => setIsOpen(false);
+
+  const closeNav = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div className="relative inline-block">
       <button
         className="transition"
         onMouseOver={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         onClick={() => setIsOpen(!isOpen)}
       >
         Packages
