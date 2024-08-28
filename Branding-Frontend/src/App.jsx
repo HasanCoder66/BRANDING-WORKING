@@ -1,11 +1,7 @@
-// Style file ====>
-
-
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/HomePage/Home";
 import Portfolio from "./pages/PortfolioPage/Portfolio";
-// import Service from "./pages/ServicesPage/Services";
 import Blog from "./pages/BlogPage/Blog";
 import Contact from "./pages/ContactPage/Contact";
 import About from "./pages/AboutPage/About";
@@ -42,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-      element: <AllServices />,
+        element: <AllServices />,
       },
       {
         path: "/portfolio",
@@ -56,10 +52,6 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog />,
       },
-      // {
-      //   path: "/getConsultancy",
-      //   element: <GetConsultant />,
-      // },
       {
         path: "/packages/:id",
         element: <Packages />,
