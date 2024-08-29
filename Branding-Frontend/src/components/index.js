@@ -21,6 +21,7 @@ import ButtonTwo from "./ButtonTwo";
 import Business from "./Bussiness";
 import BlogView from "./BlogView";
 import BlogCmpHead from "./BlogCmpHead";
+import FeaturedBlog from './FeaturedBlog'
 import Footer from "./Footer";
 
 export {
@@ -47,6 +48,7 @@ export {
   Business,
   BlogView,
   BlogCmpHead,
+  FeaturedBlog,
   Footer,
 };
 

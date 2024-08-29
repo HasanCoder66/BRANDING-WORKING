@@ -5,7 +5,7 @@ import Portfolio from "./pages/PortfolioPage/Portfolio";
 import Blog from "./pages/BlogPage/Blog";
 import Contact from "./pages/ContactPage/Contact";
 import About from "./pages/AboutPage/About";
-import { Footer, MobileNav, Nav } from "./components";
+import { FeaturedBlog, Footer, MobileNav, Nav } from "./components";
 import AllServices from "./pages/ServicesPage/Services";
 import Packages from "./pages/PackagesPage/Packages";
 
@@ -51,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/all-blogs",
+        element: <FeaturedBlog />,
       },
       {
         path: "/packages/:id",
