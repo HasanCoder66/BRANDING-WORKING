@@ -9,7 +9,8 @@ import rizzwan from "../../assets/rizz.jpeg";
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
-  let cardImgLink = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTy24lExT829Bi5GVCQUSS3Hn7xIeRB1RWTA&s"
+  let cardImgLink =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTy24lExT829Bi5GVCQUSS3Hn7xIeRB1RWTA&s";
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -70,12 +71,16 @@ const AboutPage = () => {
             success.
           </p>
         </div>
-<div>
-<AboutLeftCard />
-<AboutRightCard  /> 
-{/* imgLink={cardImgLink} */}
-<AboutLeftCard />
-</div>
+
+        <div className="">
+          <div className="">
+            <AboutLeftCard />
+            <AboutRightCard />
+            {/* imgLink={cardImgLink} */}
+            <AboutLeftCard />
+          </div>
+        </div>
+
         {/* TeamMates Cards ===> */}
         <div>
           <div className="flex justify-evenly flex-wrap gap-[15px] pt-[6rem]">

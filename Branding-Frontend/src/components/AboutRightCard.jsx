@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutRightCard({imgLink}) {
   return (
-    <div className="py-16 ">
+    <div className="p-[4rem] ">
       <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
         <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
           <div className="md:7/12 lg:w-6/12">
@@ -23,8 +23,9 @@ export default function AboutRightCard({imgLink}) {
           </div>
           <div className="md:5/12 lg:w-5/12">
             <img
+              src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
               // src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-              src={imgLink}
+              // src={imgLink}
               alt="image"
             />
           </div>
