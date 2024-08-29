@@ -1,14 +1,15 @@
 import { Helmet } from "react-helmet-async";
-import { TeamMatesCard } from "../../components";
+import { AboutLeftCard, AboutRightCard, TeamMatesCard } from "../../components";
 import { useEffect } from "react";
 import AOS from "aos";
-import amc from '../../assets/amc.jpg'
-import munna from '../../assets/munna.jpg'
-import hasan from '../../assets/hasan.png'
-import rizzwan from '../../assets/rizz.jpeg'
+import amc from "../../assets/amc.jpg";
+import munna from "../../assets/munna.jpg";
+import hasan from "../../assets/hasan.png";
+import rizzwan from "../../assets/rizz.jpeg";
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
+  let cardImgLink = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTy24lExT829Bi5GVCQUSS3Hn7xIeRB1RWTA&s"
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -57,18 +58,25 @@ const AboutPage = () => {
             About Branding <span className="text-white">Hopes</span>
           </h2>
           <p className="text text-white text-center">
-            At <span className="text-[#fca311]">Branding Hopes</span>, we transcend the conventional role of a digital
-            marketing agency. We are your steadfast partners, committed to
-            propelling your success to new heights. Fueled by an unwavering
-            passion for creativity and an unyielding dedication to tangible
-            results, we stand alongside businesses like yours, empowering them
-            to not just survive, but truly thrive in the dynamic landscape of
-            the digital age. With our strategic insights, innovative solutions,
-            and personalized approach, we pave the way for your brand's
-            remarkable journey towards enduring success.
+            At <span className="text-[#fca311]">Branding Hopes</span>, we
+            transcend the conventional role of a digital marketing agency. We
+            are your steadfast partners, committed to propelling your success to
+            new heights. Fueled by an unwavering passion for creativity and an
+            unyielding dedication to tangible results, we stand alongside
+            businesses like yours, empowering them to not just survive, but
+            truly thrive in the dynamic landscape of the digital age. With our
+            strategic insights, innovative solutions, and personalized approach,
+            we pave the way for your brand's remarkable journey towards enduring
+            success.
           </p>
         </div>
-
+<div>
+<AboutLeftCard />
+<AboutRightCard  /> 
+{/* imgLink={cardImgLink} */}
+<AboutLeftCard />
+</div>
+        {/* TeamMates Cards ===> */}
         <div>
           <div className="flex justify-evenly flex-wrap gap-[15px] pt-[6rem]">
             <div data-aos="zoom-in-right">
@@ -90,6 +98,7 @@ const AboutPage = () => {
                 buttonContent="view more about"
               />
             </div>
+
             <div data-aos="zoom-out-up">
               <TeamMatesCard
                 imgUrl={amc}

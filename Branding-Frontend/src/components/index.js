@@ -22,6 +22,8 @@ import Business from "./Bussiness";
 import BlogView from "./BlogView";
 import BlogCmpHead from "./BlogCmpHead";
 import FeaturedBlog from './FeaturedBlog'
+import AboutRightCard from "./AboutRightCard";
+import AboutLeftCard from "./AboutLeftCard";
 import Footer from "./Footer";
 
 export {
@@ -49,6 +51,8 @@ export {
   BlogView,
   BlogCmpHead,
   FeaturedBlog,
+  AboutRightCard,
+  AboutLeftCard,
   Footer,
 };
 
