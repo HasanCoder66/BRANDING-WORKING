@@ -1,6 +1,6 @@
 import bcryptjs from "bcryptjs";
 import User from "../models/userModel.js";
-// import { createError } from "../Utils/error.js";
+import { createError } from "../Utils/error.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 // import { responseMessages } from "../constants/responseMessages.js";
@@ -68,6 +68,7 @@ export async function login(req, res, next) {
     // console.log(user);
     // console.log(user._doc);
     const { password, ...other } = user._doc;
+    // console.log(password);
     console.log(other);
     let message = "User sign in successfully";
     res

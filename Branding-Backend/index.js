@@ -1,10 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
-// import cookieParser from "cookie-parser";
-// import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
-
+import UserRoute from "./routes/userRoute.js";
 // import Stripe from 'stripe';
 
 // mongodb+srv://techexpertjobfinders:S3AjilK4ubU7Al8Q@cluster0.ozqaljr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -34,9 +34,9 @@ const connectDB = () => {
 };
 
 // Middlewares=====>>>>
-// app.use(cookieParser());
-// app.use(express.json());
-// app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(express.json());
+app.use(bodyParser.json());
 app.use(
   cors({
       credentials: true,
@@ -50,7 +50,7 @@ app.use(
 //   res.send('Hello, world!');
 // });
 
-// app.use("/api/auth", UserRoute);
+app.use("/api/auth", UserRoute);
 // app.use("/api/blog", blogRoutes);
 // app.use("/api/upload", uploadRoute);
 
