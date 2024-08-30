@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AboutRightCard({imgLink}) {
+export default function AboutRightCard({ imgLink }) {
   return (
     <div className="p-[4rem] ">
       <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
