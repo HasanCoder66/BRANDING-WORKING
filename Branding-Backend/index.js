@@ -46,20 +46,14 @@ app.use(
 );
 
 // middlewares =====>
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello, world!');
+// });
+
 // app.use("/api/auth", UserRoute);
-// app.use("/api/myCv", cvRoute);
-// app.use("/api/website", websiteRoute);
-// app.use("/api/myResume", ResumeTemplateRoute);
-// app.use("/api/websiteTemplate", WebsiteTemplateRoute);
-// app.use("/api/coverLetter", CoverLetterRoute);
-// app.use("/api/coverLetterTem", CoverLetterTemplateRoute);
-// app.use("/api/job", jobRoutes);
 // app.use("/api/blog", blogRoutes);
-// app.use("/api/feedback", feedbackRoutes);
 // app.use("/api/upload", uploadRoute);
+
 
 //Error Middleware ====>
 app.use((err, req, res, next) => {
@@ -77,34 +71,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-// app.post('/create-checkout-session', async (req, res) => {
-//   console.log('Request received at /create-checkout-session');
-//   try {
-//     const session = await stripe.checkout.sessions.create({
-//       payment_method_types: ['card'],
-//       line_items: [
-//         {
-//           price_data: {
-//             currency: 'usd',
-//             product_data: {
-//               name: req.body.name,
-//             },
-//             unit_amount: req.body.amount,
-//           },
-//           quantity: 1,
-//         },
-//       ],
-//       mode: 'payment',
-//       success_url: 'https://your-website.com/success',
-//       cancel_url: 'https://your-website.com/cancel',
-//     });
-//     console.log('Session created:', session.id);
-//     res.json({ id: session.id });
-//   } catch (error) {
-//     console.error("Error creating checkout session:", error);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
 
 // SERVER LISTENING ON THE PORT
 app.listen(PORT, () => {
