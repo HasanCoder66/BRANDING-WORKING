@@ -22,8 +22,8 @@ export default {
         "coral-light": "#FEF6F5",
       },
       backgroundImage: {
-        "solution-bg-image": "url('/src/assets/solution-bg.jpg')",
-        "login-bg-image": "url('/src/assets/loginbg.jpg')",
+        "solution-bg-image": "url('https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg')",
+        "login-bg-image": "url('https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg')",
       },
       animation: {
         moveDown: "moveDown 0.7s ease-out 1",

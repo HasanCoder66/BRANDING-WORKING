@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 // import ReCAPTCHA from "react-google-recaptcha";
 
-import { SIGNUP_URL } from "../constants/apis.js";
+// import { SIGNUP_URL } from "../constants/apis.js";
 
 import Swal from "sweetalert2";
 import axios from "axios";
 
 import { useDispatch } from "react-redux";
-import { signupSuccess } from "../Redux/Slices/userSlices";
+import { signupSuccess } from "../Redux/Slices/userSlices.js";
 
 function SignUpForm() {
   // register forms states ==>
@@ -26,88 +26,90 @@ function SignUpForm() {
   console.log(password);
   console.log(cPassword);
 
-  const signupHandlerWithMongoDb = async (e) => {
-    e.preventDefault();
-    if (
-      email === "" ||
-      fullName === "" ||
-      password === "" ||
-      cPassword === ""
-    ) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Missing Fields!",
-      });
-    } else if (password.length < 8) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Password must be at least 8 characters long!",
-      });
-    } else if (password.length < 8) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Password must be at least 8 characters long!",
-      });
-    } else if (password !== cPassword) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Password does not match!",
-      });
-    } else if (email != '' && !email.toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    )) {
+    const signupHandlerWithMongoDb = async (e) => {
+      e.preventDefault();
+      if (
+        email === "" ||
+        fullName === "" ||
+        password === "" ||
+        cPassword === ""
+      ) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Missing Fields!",
+        });
+      } else if (password.length < 8) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Password must be at least 8 characters long!",
+        });
+      } else if (password.length < 8) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Password must be at least 8 characters long!",
+        });
+      } else if (password !== cPassword) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Password does not match!",
+        });
+      } else if (
+        email != "" &&
+        !email
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          )
+      ) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Email is Not Valid!",
+          timer: 1500,
+        });
+      } else {
+        // console.log("signup handler is working");
+        const userCredential = {
+          username: fullName,
+          email,
+          password,
+        };
+        // console.log(userCredential);
 
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Email is Not Valid!",
-        timer: 1500
-      });
+        try {
+          const response = await axios.post(`/api/${SIGNUP_URL}`, userCredential);
+          console.log(response.data.data);
+          // .data.data
+          dispatch(signupSuccess(response.data.data));
 
-  } else {
-      // console.log("signup handler is working");
-      const userCredential = {
-        username: fullName,
-        email,
-        password,
-      };
-      // console.log(userCredential);
+          if (response.statusText === "OK") {
+            Swal.fire({
+              title: "Good job!",
+              text: "user SignUp successfully!",
+              icon: "success",
+            });
 
-      try {
-        const response = await axios.post(`/api/${SIGNUP_URL}`, userCredential);
-        console.log(response.data.data);
-        // .data.data
-        dispatch(signupSuccess(response.data.data));
-
-        if (response.statusText === "OK") {
-          Swal.fire({
-            title: "Good job!",
-            text: "user SignUp successfully!",
-            icon: "success",
-          });
-
-          setTimeout(() => {
-            navigate("/app");
-          }, 3000);
-        }
-      } catch (error) {
-        console.log(error);
-        console.log(error.response.data.message.includes('duplicate key'));
-        if(error.response.data.message.includes('duplicate key')){
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: `Email Already Registered`,
-          });
+            setTimeout(() => {
+              navigate("/app");
+            }, 3000);
+          }
+        } catch (error) {
+          console.log(error);
+          console.log(error.response.data.message.includes("duplicate key"));
+          if (error.response.data.message.includes("duplicate key")) {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: `Email Already Registered`,
+            });
+          }
         }
       }
-    }
-  };
+    };
 
   // const [capVal, setCapVal] = useState(null);
   // const myVariable = import.meta.env.VITE_SITE_KEY;
@@ -115,7 +117,7 @@ function SignUpForm() {
   return (
     <div className="bg-login-bg-image w-[60%] flex justify-center">
       <div className="flex justify-center w-full items-center gap-[4rem] bg-[#22222280] px-12 py-10">
-        <form className="w-[50%] p-10 shadow-lg bg-white   rounded-lg">
+        <form className="w-[50%]  p-10 shadow-lg bg-white   rounded-lg">
           <h1 className="text-4xl block  font-bold text-theme-red text-center">
             SignUp
             <br />
@@ -193,9 +195,9 @@ function SignUpForm() {
             <button
               // disabled={!capVal}
               type="submit"
-              className='border-2 text-3xl overflow-hidden  w-full   font-semibold className="text-[1.6rem] leading-[1.6rem] relative z-10 bg-theme-red text-white px-[2rem] py-[1.2rem] rounded-lg transition-all before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-yellow before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300  '
+              className='border-2 text-3xl overflow-hidden w-full font-semibold className="text-[1.6rem] leading-[1.6rem] relative z-10 bg-theme-red text-white px-[2rem] py-[1.2rem] rounded-lg transition-all before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-yellow before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300  '
               // disabled:cursor-not-allowed
-              onClick={signupHandlerWithMongoDb}
+                onClick={signupHandlerWithMongoDb}
             >
               Sign Up
             </button>
@@ -211,7 +213,11 @@ function SignUpForm() {
           </div>
         </form>
         <div className="w-[50%] text-center">
-          <img src={logo} alt="" />
+          {/* <img src={logo} alt="" /> */}
+          <img
+            src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
+            alt=""
+          />
           <p className="text-center text-xl text-white font-400">
             Make a CV to define yourself The right away. Meet thousands of job
             announcements and employers by the help of your profile with a

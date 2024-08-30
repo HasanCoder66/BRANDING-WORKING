@@ -16,14 +16,16 @@ import BlogCard from "./BlogCard";
 import TeamMatesCard from "./TeamMatesCard";
 import AllServiceCardCmp from "./AllServicesCard";
 import PackageCard from "./PackageCard";
-import CTA from './CTA'
+import CTA from "./CTA";
 import ButtonTwo from "./ButtonTwo";
 import Business from "./Bussiness";
 import BlogView from "./BlogView";
 import BlogCmpHead from "./BlogCmpHead";
-import FeaturedBlog from './FeaturedBlog'
+import FeaturedBlog from "./FeaturedBlog";
 import AboutRightCard from "./AboutRightCard";
 import AboutLeftCard from "./AboutLeftCard";
+import SignUpForm from "./SignupForm";
+import LoginForm from "./LoginForm";
 import Footer from "./Footer";
 
 export {
@@ -53,6 +55,7 @@ export {
   FeaturedBlog,
   AboutRightCard,
   AboutLeftCard,
+  SignUpForm,
+  LoginForm,
   Footer,
 };
-

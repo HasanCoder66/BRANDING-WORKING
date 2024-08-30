@@ -1,9 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import userReducer from './Slices/userSlices.js'
-import resumeReducer from './Slices/resumeSlices.js'
-
-import coverLetterReducer from './Slices/coverLetterSlices.js'
-
 import {
   persistStore,
   persistReducer,
@@ -24,8 +20,7 @@ const persistConfig = {
 }
 const rootReducer = combineReducers({
   user: userReducer,
-  coverLetter: coverLetterReducer,
-  resume : resumeReducer
+
 })
 
 
