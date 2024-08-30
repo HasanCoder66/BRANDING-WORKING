@@ -7,7 +7,7 @@ const BlogCard = ({ data }) => {
   // console.log(data.imgUrl)
   const { id, desc, imgUrl, title, buttonContent, link } = data;
   return (
-    <Card key={id} className="  object-contain overflow-hidden">
+    <Card key={id} className="  object-contain overflow-hidden border-2px-[#fca311]">
       <Card.Img
         // variant="top"
         src={imgUrl}

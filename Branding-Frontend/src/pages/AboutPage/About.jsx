@@ -6,10 +6,22 @@ import amc from "../../assets/amc.jpg";
 import munna from "../../assets/munna.jpg";
 import hasan from "../../assets/hasan.png";
 import rizzwan from "../../assets/rizz.jpeg";
-import aboutCover from '../../assets/aboutCover.png'
+import aboutCover from "../../assets/aboutCover.png";
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
+  var firstBoxText = `At Branding Hopes, our mission is to empower businesses with innovative digital marketing solutions. We aim to drive growth and success while helping clients navigate the digital landscape.
+ `;
+  var secondBoxText = `We believe in integrity, fostering trust with our clients and partners. Innovation drives us to enhance our services continuously, while collaboration and excellence are at the core of our approach.
+
+ `;
+  var thirdBoxText = `Branding Hopes offers a range of digital marketing services, including web design, development, and SEO. Our expertise boosts online visibility and brand presence through social media management.
+ `;
+  var fourthBoxText = `Choosing Branding Hopes means partnering with a passionate team dedicated to your success. We combine industry knowledge with creative strategies to deliver measurable results through a personalized approach.
+ `;
+  var fifthBoxText = `Our team consists of skilled professionals with diverse backgrounds in marketing, design, and technology. We foster a culture of continuous learning to stay ahead of industry trends and achieve your goals.
+ Feel free to make any adjustments to better fit your brand!
+ `;
   let cardImgLink =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTy24lExT829Bi5GVCQUSS3Hn7xIeRB1RWTA&s";
   useEffect(() => {
@@ -48,7 +60,7 @@ const AboutPage = () => {
       <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
         <div data-aos="fade-down" className="w-[100vw] ">
           <img
-          src={aboutCover}
+            src={aboutCover}
             // src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
             alt="About-Cover"
             className="h-[50vh] w-[100%] object-cover	"
@@ -76,10 +88,12 @@ const AboutPage = () => {
 
         <div className="">
           <div className="">
-            <AboutLeftCard />
-            <AboutRightCard />
+            <AboutRightCard text={firstBoxText} heading="Our Mission"/>
+            <AboutLeftCard text={secondBoxText} />
+            <AboutRightCard text={thirdBoxText} />
             {/* imgLink={cardImgLink} */}
-            <AboutLeftCard />
+            <AboutLeftCard text={thirdBoxText} />
+            <AboutRightCard text={fifthBoxText} />
           </div>
         </div>
 

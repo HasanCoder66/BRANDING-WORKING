@@ -9,6 +9,10 @@
   
 }
 
+.customFont {
+font-size: 12px;
+
+}
 
 body::-webkit-scrollbar {
   width: 15px;
