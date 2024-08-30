@@ -6,6 +6,7 @@ import amc from "../../assets/amc.jpg";
 import munna from "../../assets/munna.jpg";
 import hasan from "../../assets/hasan.png";
 import rizzwan from "../../assets/rizz.jpeg";
+import aboutCover from '../../assets/aboutCover.png'
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
@@ -47,8 +48,9 @@ const AboutPage = () => {
       <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
         <div data-aos="fade-down" className="w-[100vw] ">
           <img
-            src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
-            alt="image"
+          src={aboutCover}
+            // src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
+            alt="About-Cover"
             className="h-[50vh] w-[100%] object-cover	"
           />
         </div>

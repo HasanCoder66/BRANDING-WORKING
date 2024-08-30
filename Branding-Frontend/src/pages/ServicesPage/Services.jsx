@@ -3,6 +3,7 @@ import data from "./servicesData.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import serviceCover from "../../assets/serviceCover.png";
 import { AllServiceCardCmp, BlogCard } from "../../components";
 
 const AllServices = () => {
@@ -32,8 +33,9 @@ const AllServices = () => {
     <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
       <div data-aos="zoom-in-left" className="w-[100vw] ">
         <img
-          src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
-          alt="image"
+          // src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
+          src={serviceCover}
+          alt="Service-Cover"
           className="h-[50vh] w-[100%] object-cover	"
         />
       </div>
