@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AboutLeftCard() {
+export default function AboutLeftCard({text, heading}) {
     return (
         <div className="p-[4rem]">
             <div className="container m-auto px-6 text-white md:px-12 xl:px-6">
@@ -13,17 +13,15 @@ export default function AboutLeftCard() {
                     </div>
                     <div className="md:7/12 lg:w-6/12">
                         <h2 className="text-2xl text-[#fca311] uppercase font-bold md:text-4xl">
-                            React development is carried out by passionate developers
+                            {heading}
                         </h2>
                         <p className="mt-6 text-white">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
-                            accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
-                            aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
+                            {text}
                         </p>
-                        <p className="mt-4 text-white">
+                        {/* <p className="mt-4 text-white">
                             Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
                             Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>

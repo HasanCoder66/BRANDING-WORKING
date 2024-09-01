@@ -7,6 +7,11 @@ import munna from "../../assets/munna.jpg";
 import hasan from "../../assets/hasan.png";
 import rizzwan from "../../assets/rizz.jpeg";
 import aboutCover from "../../assets/aboutCover.png";
+import ourMission from '../../assets/mission.png'
+import ourValues from '../../assets/values.png'
+import ourTeam from '../../assets/team.png'
+import whyChooseUs from '../../assets/whychoose.png'
+import ourService from '../../assets/service.png'
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
@@ -22,8 +27,11 @@ const AboutPage = () => {
   var fifthBoxText = `Our team consists of skilled professionals with diverse backgrounds in marketing, design, and technology. We foster a culture of continuous learning to stay ahead of industry trends and achieve your goals.
  Feel free to make any adjustments to better fit your brand!
  `;
-  let cardImgLink =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTy24lExT829Bi5GVCQUSS3Hn7xIeRB1RWTA&s";
+  let ourMissionImg = ourMission
+  let ourValuesImg = ourValues
+  let ourTeamImg = ourTeam
+  let whyChooseUsImg = whyChooseUs
+  let ourServiceImg = ourService
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -88,12 +96,14 @@ const AboutPage = () => {
 
         <div className="">
           <div className="">
-            <AboutRightCard text={firstBoxText} heading="Our Mission"/>
-            <AboutLeftCard text={secondBoxText} />
-            <AboutRightCard text={thirdBoxText} />
+            <AboutRightCard text={firstBoxText} heading="Our Mission" imgLink={ourMission}/>
+            <AboutLeftCard
+              text={secondBoxText} heading="Our Values"   imgLink={ourMission}  />
+            <AboutRightCard text={thirdBoxText} heading="Our Services"/>
             {/* imgLink={cardImgLink} */}
-            <AboutLeftCard text={thirdBoxText} />
-            <AboutRightCard text={fifthBoxText} />
+            <AboutLeftCard text={thirdBoxText} heading="Why Choose Us?
+"/>
+            <AboutRightCard text={fifthBoxText} heading="Our Team"/>
           </div>
         </div>
 

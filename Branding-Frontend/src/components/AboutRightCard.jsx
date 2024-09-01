@@ -1,6 +1,6 @@
 import React from "react";
-import ourMission from '../assets/mission.png'
-export default function AboutRightCard({text, heading}) {
+
+export default function AboutRightCard({text, heading, imgLink}) {
   console.log(text);
   return (
     <div className="p-[4rem] ">
@@ -21,7 +21,7 @@ export default function AboutRightCard({text, heading}) {
           </div>
           <div className="md:5/12 lg:w-5/12">
             <img
-              src={ourMission}
+              src={imgLink}
               alt="ourMission"
             />
           </div>
