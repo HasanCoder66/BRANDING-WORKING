@@ -98,12 +98,11 @@ const AboutPage = () => {
           <div className="">
             <AboutRightCard text={firstBoxText} heading="Our Mission" imgLink={ourMission}/>
             <AboutLeftCard
-              text={secondBoxText} heading="Our Values"   imgLink={ourMission}  />
-            <AboutRightCard text={thirdBoxText} heading="Our Services"/>
+              text={secondBoxText} heading="Our Values"   imgLink={ourValues}  />
+            <AboutRightCard text={thirdBoxText} heading="Our Services" imgLink={ourService}/>
             {/* imgLink={cardImgLink} */}
-            <AboutLeftCard text={thirdBoxText} heading="Why Choose Us?
-"/>
-            <AboutRightCard text={fifthBoxText} heading="Our Team"/>
+            <AboutLeftCard text={thirdBoxText} heading="Why Choose Us?" imgLink={whyChooseUs}/>
+            <AboutRightCard text={fifthBoxText} heading="Our Team" imgLink={ourTeam}/>
           </div>
         </div>
 
