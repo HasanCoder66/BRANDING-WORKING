@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import logo from "../assets/logo.png";
 import { Link , useNavigate} from "react-router-dom";
-// import { LOGIN_URL } from "../constants/apis.js";
+import { LOGIN_URL } from "../constants/apis.js";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 import axios from "axios"
@@ -56,7 +56,7 @@ function LoginForm() {
           
         } else {
           dispatch(loginSuccess(response?.data?.data));
-          navigate("/app");
+          navigate("/blog");
         }
         
       } catch (error) {

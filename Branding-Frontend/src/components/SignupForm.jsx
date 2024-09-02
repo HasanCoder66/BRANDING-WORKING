@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import ReCAPTCHA from "react-google-recaptcha";
 
-// import { SIGNUP_URL } from "../constants/apis.js";
+import { SIGNUP_URL } from "../constants/apis.js";
 
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -94,7 +94,7 @@ function SignUpForm() {
             });
 
             setTimeout(() => {
-              navigate("/app");
+              navigate("/blog");
             }, 3000);
           }
         } catch (error) {
