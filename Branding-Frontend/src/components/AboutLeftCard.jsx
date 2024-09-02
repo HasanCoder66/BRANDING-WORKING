@@ -1,4 +1,5 @@
 import React from 'react'
+import EditInTouchBtn from './EditInTouchBtn';
 
 export default function AboutLeftCard({text, heading, imgLink}) {
     return (
@@ -8,7 +9,6 @@ export default function AboutLeftCard({text, heading, imgLink}) {
                     <div className="md:5/12 lg:w-5/12">
                         <img
                             src={imgLink}
-                            // src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
                             alt="image"
                         />
                     </div>
@@ -23,6 +23,7 @@ export default function AboutLeftCard({text, heading, imgLink}) {
                             Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
                             Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
                         </p> */}
+                        <EditInTouchBtn linktoRoute="/contact"/>
                     </div>
                 </div>
             </div>

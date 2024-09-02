@@ -1,4 +1,5 @@
 import React from "react";
+import EditInTouchBtn from "./EditInTouchBtn";
 
 export default function AboutRightCard({text, heading, imgLink}) {
   console.log(text);
@@ -13,6 +14,7 @@ export default function AboutRightCard({text, heading, imgLink}) {
             <p className="mt-6 text-white">
               {text}
             </p>
+            <EditInTouchBtn linktoRoute="/contact" />
             {/* <p className="mt-4 text-white">
               Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
               expedita at? Asperiores nemo possimus nesciunt dicta veniam

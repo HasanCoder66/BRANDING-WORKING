@@ -7,11 +7,11 @@ import munna from "../../assets/munna.jpg";
 import hasan from "../../assets/hasan.png";
 import rizzwan from "../../assets/rizz.jpeg";
 import aboutCover from "../../assets/aboutCover.png";
-import ourMission from '../../assets/mission.png'
-import ourValues from '../../assets/values.png'
-import ourTeam from '../../assets/team.png'
-import whyChooseUs from '../../assets/whychoose.png'
-import ourService from '../../assets/service.png'
+import ourMission from "../../assets/mission.png";
+import ourValues from "../../assets/values.png";
+import ourTeam from "../../assets/team.png";
+import whyChooseUs from "../../assets/whychoose.png";
+import ourService from "../../assets/service.png";
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
@@ -27,11 +27,11 @@ const AboutPage = () => {
   var fifthBoxText = `Our team consists of skilled professionals with diverse backgrounds in marketing, design, and technology. We foster a culture of continuous learning to stay ahead of industry trends and achieve your goals.
  Feel free to make any adjustments to better fit your brand!
  `;
-  let ourMissionImg = ourMission
-  let ourValuesImg = ourValues
-  let ourTeamImg = ourTeam
-  let whyChooseUsImg = whyChooseUs
-  let ourServiceImg = ourService
+  let ourMissionImg = ourMission;
+  let ourValuesImg = ourValues;
+  let ourTeamImg = ourTeam;
+  let whyChooseUsImg = whyChooseUs;
+  let ourServiceImg = ourService;
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -78,7 +78,7 @@ const AboutPage = () => {
         {/* md:7/12 lg:w-6/12  */}
         <div className="flex flex-col items-center gap-[2rem] lg:px-[8rem] pt-[2rem]">
           <h2 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
-            About Branding <span className="text-white">Hopes</span>
+            <span className="text-white">About </span> Branding Hopes
           </h2>
           <p className="text text-white text-center">
             At <span className="text-[#fca311]">Branding Hopes</span>, we
@@ -96,13 +96,32 @@ const AboutPage = () => {
 
         <div className="">
           <div className="">
-            <AboutRightCard text={firstBoxText} heading="Our Mission" imgLink={ourMission}/>
+            <AboutRightCard
+              text={firstBoxText}
+              heading="Our Mission"
+              imgLink={ourMission}
+            />
             <AboutLeftCard
-              text={secondBoxText} heading="Our Values"   imgLink={ourValues}  />
-            <AboutRightCard text={thirdBoxText} heading="Our Services" imgLink={ourService}/>
+              text={secondBoxText}
+              heading="Our Values"
+              imgLink={ourValues}
+            />
+            <AboutRightCard
+              text={thirdBoxText}
+              heading="Our Services"
+              imgLink={ourService}
+            />
             {/* imgLink={cardImgLink} */}
-            <AboutLeftCard text={thirdBoxText} heading="Why Choose Us?" imgLink={whyChooseUs}/>
-            <AboutRightCard text={fifthBoxText} heading="Our Team" imgLink={ourTeam}/>
+            <AboutLeftCard
+              text={thirdBoxText}
+              heading="Why Choose Us?"
+              imgLink={whyChooseUs}
+            />
+            <AboutRightCard
+              text={fifthBoxText}
+              heading="Our Team"
+              imgLink={ourTeam}
+            />
           </div>
         </div>
 

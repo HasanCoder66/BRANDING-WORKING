@@ -26,6 +26,7 @@ import AboutRightCard from "./AboutRightCard";
 import AboutLeftCard from "./AboutLeftCard";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
+import EditInTouchBtn from './EditInTouchBtn.jsx'
 import Footer from "./Footer";
 
 export {
@@ -55,6 +56,7 @@ export {
   FeaturedBlog,
   AboutRightCard,
   AboutLeftCard,
+  EditInTouchBtn,
   SignUpForm,
   LoginForm,
   Footer,
