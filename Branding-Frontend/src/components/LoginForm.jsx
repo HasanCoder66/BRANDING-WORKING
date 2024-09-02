@@ -82,7 +82,7 @@ function LoginForm() {
           </h1>
           <div className="mt-4 relative">
             <label
-              className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
+              className="   text-[#14213d] absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
             >
               Email
@@ -97,7 +97,7 @@ function LoginForm() {
           </div>
           <div className="mt-5 relative">
             <label
-              className="absolute  text-theme-red top:[-1] left-1 bg-white px-3 py-1   "
+              className="absolute  text-[#14213d] top:[-1] left-1 bg-white px-3 py-1   "
               htmlFor="password"
             >
               Password
@@ -130,28 +130,31 @@ function LoginForm() {
             </p>
           </div>
         </div>
-        <div className="w-[50%] text-center">
-          {/* <img src={logo} alt="" /> */}
-          <img
-            src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
-            alt=""
-          />
-          <p className="text-center  text-white font-400">
-            Make a CV to define yourself The right away. Meet thousands of job
-            announcements and employers by the help of your profile with a
-            private extension, which you can share at all social media
-            environments.
-          </p>
-          <Link to={"/signup"}>
-            <ButtonTwo />
-            {/* <button className='bg-white  overflow-hidden w-1/3 p-4 rounded-2xl mt-10 className="text-[1.6em] leading-[1.6em] relative z-10  px-[2em] py-[1.2em]  text-theme-red hover:text-white transition-all  before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-red before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300"'>
-              Signup
-            </button> */}
-          </Link>
-        </div>
+        
       </div>
     </div>
   );
 }
 
 export default LoginForm;
+
+
+// {/* <div className="w-[50%] text-center">
+//           {/* <img src={logo} alt="" /> */}
+//           <img
+//             src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
+//             alt=""
+//           />
+//           <p className="text-center  text-white font-400">
+//             Make a CV to define yourself The right away. Meet thousands of job
+//             announcements and employers by the help of your profile with a
+//             private extension, which you can share at all social media
+//             environments.
+//           </p>
+//           <Link to={"/signup"}>
+//             <ButtonTwo />
+//             {/* <button className='bg-white  overflow-hidden w-1/3 p-4 rounded-2xl mt-10 className="text-[1.6em] leading-[1.6em] relative z-10  px-[2em] py-[1.2em]  text-theme-red hover:text-white transition-all  before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-red before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300"'>
+//               Signup
+//             </button> */}
+//           </Link>
+//         </div> */}

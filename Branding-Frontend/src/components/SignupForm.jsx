@@ -148,7 +148,6 @@ function SignUpForm() {
               type="email"
               required
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
-              placeholder=""
             />
           </div>
 
@@ -164,7 +163,6 @@ function SignUpForm() {
               type="password"
               required
               className=" w-full  border  mt-4  py-4 px-2 rounded-lg focus:outline-none focus:ring-0 focus:border-gray-600"
-              placeholder=""
             />
           </div>
           <div className="mt-4 relative">
@@ -179,7 +177,6 @@ function SignUpForm() {
               type="password"
               required
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
-              placeholder=""
             />
           </div>
 
@@ -212,26 +209,28 @@ function SignUpForm() {
             </p>
           </div>
         </form>
-        <div className="w-[50%] text-center">
-          {/* <img src={logo} alt="" /> */}
-          <img
-            src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
-            alt=""
-          />
-          <p className="text-center  text-white font-400">
-            Make a CV to define yourself The right away. Meet thousands of job
-            announcements and employers by the help of your profile with a
-            private extension, which you can share at all social media
-            environments.
-          </p>
-          <Link to={"/login"}>
-            <button className='bg-white  overflow-hidden w-1/3 p-4  text-theme-red rounded-2xl mt-10 className="text-[1.6rem] leading-[1.6rem] relative z-10  hover:text-white px-[2rem] py-[1.2rem]  transition-all  before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-red before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300"'>
-              Login
-            </button>
-          </Link>
-        </div>
+        
       </div>
     </div>
   );
 }
 export default SignUpForm;
+
+// {/* <div className="w-[50%] text-center">
+//           {/* <img src={logo} alt="" /> */}
+//           <img
+//             src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929235/branding%20hopes/Option_03_scel4o.jpg"
+//             alt=""
+//           />
+//           <p className="text-center  text-white font-400">
+//             Make a CV to define yourself The right away. Meet thousands of job
+//             announcements and employers by the help of your profile with a
+//             private extension, which you can share at all social media
+//             environments.
+//           </p>
+//           <Link to={"/login"}>
+//             <button className='bg-white  overflow-hidden w-1/3 p-4  text-theme-red rounded-2xl mt-10 className="text-[1.6rem] leading-[1.6rem] relative z-10  hover:text-white px-[2rem] py-[1.2rem]  transition-all  before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-red before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300"'>
+//               Login
+//             </button>
+//           </Link>
+//         </div> */}

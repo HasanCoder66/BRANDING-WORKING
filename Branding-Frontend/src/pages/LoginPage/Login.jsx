@@ -3,7 +3,7 @@ import { LoginForm } from '../../components'
 
 const Login = () => {
   return (
-    <div className=" bg-theme-red h-screen flex justify-center items-center min-h-dvh">
+    <div className="landingContainer  h-screen flex justify-center items-center min-h-dvh">
     <LoginForm />
   </div>
   )
