@@ -22,7 +22,7 @@ function Dropdown({ setIsOpen, isOpen }) {
       </button>
       {isOpen && (
         <ul
-          className="absolute text-black z-10 bg-[#e5e5e5] rounded shadow w-[250px] mt-2 py-2 text-[15px] "
+          className="absolute text-black z-10 bg-[#e5e5e5] rounded shadow w-[255px] mt-2 py-2 text-[15px] "
           onMouseLeave={handleMouseLeave}
         >
           <Link to="/packages/web">
@@ -62,7 +62,7 @@ function Dropdown({ setIsOpen, isOpen }) {
               className="hover:bg-[#fca311] hover:text-white px-4 py-2"
               onClick={closeNav}
             >
-              SEO
+             Search Engine Optimization (SEO)
             </li>
           </Link>
           <Link to="/packages/ppc">
