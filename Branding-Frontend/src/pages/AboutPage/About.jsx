@@ -119,6 +119,7 @@ const AboutPage = () => {
             />
             <AboutRightCard
               text={fifthBoxText}
+              lastLine="Feel free to make any adjustments to better fit your brand!"
               heading="Our Team"
               imgLink={ourTeam}
             />
