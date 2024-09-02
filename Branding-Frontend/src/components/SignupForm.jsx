@@ -116,7 +116,7 @@ function SignUpForm() {
 
   return (
     <div className="bg-login-bg-imag w-[60%] flex justify-center ">
-      <div className="flex justify-center w-full items-center gap-[4rem] bg-[#22222280] px-12 py-10">
+      <div className="flex justify-center w-full items-center gap-[4rem]  px-12 py-10">
         <form className="w-[50%]  p-10 shadow-lg bg-white   rounded-lg">
           <h1 className="text-4xl block  font-bold text-theme-red text-center">
             SignUp

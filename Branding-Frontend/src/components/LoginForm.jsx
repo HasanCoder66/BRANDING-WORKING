@@ -74,7 +74,7 @@ function LoginForm() {
   };
   return (
     <div className="bg-login-bg-imag w-[60%] flex justify-center ">
-      <div className="flex justify-center w-full items-center gap-[4em] bg-[#22222280] px-12 py-20">
+      <div className="flex justify-center w-full items-center gap-[4em] px-12 py-20">
         <div className="w-[50%] p-10 shadow-lg bg-white rounded-lg">
           <h1 className="text-4xl block  font-bold text-theme-red text-center">
             LOG IN
