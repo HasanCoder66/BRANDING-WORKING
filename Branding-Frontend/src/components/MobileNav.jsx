@@ -45,11 +45,11 @@ const MobileNav = ({ nav, closeNav }) => {
             Blogs
           </div>
         </Link>
-        {/* <Link to="/portfolio">
+        <Link to="/portfolio">
           <div className="nav-link-mobile" onClick={closeNav}>
             Portfolio
           </div>
-        </Link> */}
+        </Link>
         <Link to="/contact">
           <div className="nav-link-mobile" onClick={closeNav}>
             Contact

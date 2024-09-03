@@ -3,7 +3,7 @@ import "./styles/TeamMates.css";
 const TeamMatesCard = ({imgUrl, name, city, Role, buttonContent}) => {
   return (
     <div className="card-container mb-[1.5rem] px-[10px]">
-      <span className="pro">PRO</span>
+      {/* <span className="pro">PRO</span> */}
       <img
         className="round w-[500px] object-cover"
         src={imgUrl}

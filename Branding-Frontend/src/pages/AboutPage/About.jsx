@@ -105,7 +105,7 @@ const AboutPage = () => {
           <h2 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
             <span className="text-white">About </span> Branding Hopes
           </h2>
-          <p className="text text-white text-center">
+          <p className=" text-white text-center">
             At <span className="text-[#fca311]">Branding Hopes</span>, we
             transcend the conventional role of a digital marketing agency. We
             are your steadfast partners, committed to propelling your success to
