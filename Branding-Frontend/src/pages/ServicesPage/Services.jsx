@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import serviceCover from "../../assets/serviceCover.png";
-import { AllServiceCardCmp, BlogCard } from "../../components";
+import { BlogCard } from "../../components";
 
 const AllServices = () => {
   useEffect(() => {

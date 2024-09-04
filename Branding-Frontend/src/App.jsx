@@ -5,11 +5,12 @@ import Portfolio from "./pages/PortfolioPage/Portfolio";
 import Blog from "./pages/BlogPage/Blog";
 import Contact from "./pages/ContactPage/Contact";
 import About from "./pages/AboutPage/About";
-import { FeaturedBlog, Footer, MobileNav, Nav } from "./components";
+import { Footer, MobileNav, Nav } from "./components";
 import AllServices from "./pages/ServicesPage/Services";
 import Packages from "./pages/PackagesPage/Packages";
 import Signup from "./pages/SignupPage/Signup";
 import Login from "./pages/LoginPage/Login";
+import AllBlog from "./pages/AllBlogPage/AllBlog";
 
 const Layout = () => {
   const [nav, setNav] = useState(false);
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/all-blogs",
-        element: <FeaturedBlog />,
+        element: <AllBlog />,
       },
       {
         path: "/packages/:id",

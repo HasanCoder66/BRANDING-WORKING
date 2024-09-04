@@ -21,13 +21,14 @@ import ButtonTwo from "./ButtonTwo";
 import Business from "./Bussiness";
 import BlogView from "./BlogView";
 import BlogCmpHead from "./BlogCmpHead";
-import FeaturedBlog from "./FeaturedBlog";
 import AboutRightCard from "./AboutRightCard";
 import AboutLeftCard from "./AboutLeftCard";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
 import EditInTouchBtn from './EditInTouchBtn.jsx'
 import TeamMembersCard from "./TeamMembersCard.jsx";
+import BreadCrumbs from './BreadCrumbs.jsx'
+import VerticalBlogCard from "./VerticalBlogCard.jsx";
 import Footer from "./Footer";
 
 export {
@@ -54,11 +55,12 @@ export {
   Business,
   BlogView,
   BlogCmpHead,
-  FeaturedBlog,
   AboutRightCard,
   AboutLeftCard,
   EditInTouchBtn,
   TeamMembersCard,
+  BreadCrumbs,
+  VerticalBlogCard,
   SignUpForm,
   LoginForm,
   Footer,
