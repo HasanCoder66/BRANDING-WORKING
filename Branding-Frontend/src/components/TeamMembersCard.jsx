@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles/style.js";
-import ButtonTwo from "./ButtonTwo.jsx";
-import { Link } from "react-router-dom";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 const TeamMembersCard = ({ imgUrl, name, city, Role, desc, visitLink }) => {
   return (
     <div
@@ -26,7 +25,7 @@ const TeamMembersCard = ({ imgUrl, name, city, Role, desc, visitLink }) => {
             <p className="pl-[20px] mb-[2px] font-medium">{city}</p>
             <a href={visitLink} target="_blank" rel="noopener noreferrer">
               <p className="pl-[20px] mb-[2px] cursor-pointer font-medium">
-                Visit Linkedin Profile
+                Visit Linkedin Profile <ArrowForwardIcon />
               </p>
             </a>
           </div>

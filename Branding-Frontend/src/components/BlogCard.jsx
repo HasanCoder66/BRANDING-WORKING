@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 const BlogCard = ({ data }) => {
   // console.log(data.imgUrl)
-  const { id, desc, imgUrl, title, buttonContent, link } = data;
+  const { id, desc, imgUrl, title, buttonContent, routeLink } = data;
   return (
+    <Link to={routeLink}>
     <Card key={id} className="  object-contain overflow-hidden border-2px-[#fca311]">
       <Card.Img
         // variant="top"
@@ -22,7 +23,7 @@ const BlogCard = ({ data }) => {
             {desc}
           </Card.Text>
         </div>
-        <Link to={link}>
+        <Link to={routeLink}>
           <div
             variant="primary"
             className="mt-[10px] text-white text-base group-hover/item:text-theme-red duration-300 ease-out -translate-y-8"
@@ -32,6 +33,7 @@ const BlogCard = ({ data }) => {
         </Link>
       </Card.Body>
     </Card>
+    </Link>
   );
 };
 

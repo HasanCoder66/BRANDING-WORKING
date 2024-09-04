@@ -19,7 +19,7 @@ const data = [
     desc:
       "Craft captivating websites that not only look stunning but also drive conversions, ensuring a seamless user experience every step of the way. ",
     buttonContent: "View Packages",
-    link: "/packages/web",
+    routeLink: "/packages/web",
   },
   {
     id: "2",
@@ -29,7 +29,7 @@ const data = [
     desc:
       "Bring your brand to life with captivating video animations that engage your audience and convey your message in a dynamic and memorable way. ",
     buttonContent: "View Packages",
-    link: "/packages/video",
+    routeLink: "/packages/video",
   },
   {
     id: "3",
@@ -39,7 +39,7 @@ const data = [
     buttonContent: "View Packages",
     desc:
       "From logos to marketing collateral, our graphic design services help you stand out with visually compelling assets that reflect your brand identity.",
-    link: "/packages/graphicdesign",
+      routeLink: "/packages/graphicdesign",
   },
   {
     id: "4",
@@ -49,17 +49,18 @@ const data = [
     title: "Social Media Management",
     desc:
       "Build a strong social presence and foster meaningful connections with your audience through strategic content, engagement, and analytics-driven insights. ",
-    link: "/packages/smm",
+      routeLink: "/packages/smm",
   },
   {
     id: "5",
     buttonContent: "View Packages",
     imgUrl:SEO,
       // "https://img.freepik.com/premium-photo/person-manage-search-engine-optimization-seo-digital-marketing-with-social-media-content_34141-1044.jpg?w=826",
-    title: "Search Engine Optimization (SEO)",
+      // (SEO)
+    title: "Search Engine Optimization",
     desc:
       "Increase your online visibility and drive organic traffic to your website with our proven SEO strategies tailored to your business goals. ",
-    link: "/packages/seo",
+      routeLink: "/packages/seo",
   },
 
   {
@@ -70,7 +71,7 @@ const data = [
     title: "Pay Per Click (PPC)",
     desc:
       "Maximize your ROI with targeted PPC campaigns across various platforms, ensuring your brand gets noticed by the right audience at the right time.",
-    // link: "/packages/seo",
+      // routeLink: "/packages/seo",
   },
   {
     id: "7",
@@ -80,7 +81,7 @@ const data = [
     title: "Content Writing",
     desc:
       "Elevate your brand with high-quality content that resonates with your audience, whether it's blog posts, articles, or website copy, we've got you covered. ",
-    // link: "/packages/seo",
+      // routeLink: "/packages/seo",
   },
   {
     id: "8",
@@ -90,7 +91,7 @@ const data = [
     title: "Blogging",
     desc:
       "Establish thought leadership and drive engagement with regular blog posts that provide value to your audience and keep them coming back for more.",
-    // link: "/packages/seo",
+      // routeLink: "/packages/seo",
   },
   {
     id: "10",
@@ -100,7 +101,7 @@ const data = [
     title: "English, Arabic, Urdu Typing",
     desc:
       "Seamlessly communicate with your audience in their preferred language with our typing services, ensuring your message is clear and culturally relevant. ",
-    // link: "/packages/typing",
+    // routeLink: "/packages/typing",
   },
   // {
   //   id: "9",
@@ -110,7 +111,7 @@ const data = [
   //   title: "Copywriting",
   //   desc:
   //     "Craft compelling copy that captures attention, conveys your brand message effectively, and drives action, whether it's for ads, websites, or campaigns. ",
-  //   // link: "/packages/seo",
+  //   // routeLink: "/packages/seo",
   // },
 ];
 

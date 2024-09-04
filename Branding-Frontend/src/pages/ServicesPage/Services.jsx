@@ -39,7 +39,7 @@ const AllServices = () => {
           className="h-[50vh] w-[100%] object-cover	"
         />
       </div>
-      <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem]  pt-[2rem]">
+      <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem] pt-[2rem]">
         <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] uppercase text-center font-bold">
           We Provides You These <span className="text-white">Services</span>
         </h2>
@@ -48,7 +48,7 @@ const AllServices = () => {
         {data.map((data, index) => (
           <div
             key={index}
-            style={{ width: "350px", height: "420px" }}
+            style={{ width: "380px", height: "440px" }}
             className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
           >
             <BlogCard data={data} />
