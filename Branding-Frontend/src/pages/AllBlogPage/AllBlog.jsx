@@ -1,5 +1,5 @@
 import React from "react";
-import { BreadCrumbs, VerticalBlogCard } from "../../components";
+import { BreadCrumbs, HorizontalBlogCard, VerticalBlogCard } from "../../components";
 // import { FeaturedBlog } from '../../components'
 import posts from "../AllBlogPage/BlogPostData.js";
 
@@ -8,11 +8,14 @@ const AllBlog = () => {
     <div className="landingContainer pt-[5rem]">
       <div className="bg-white">
         <BreadCrumbs />
-        {/*  */}
-        {/* <AllBlogsCard postData={posts}/> */}
-        <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
+        {/* <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
           {posts.map((item, index) => (
             <VerticalBlogCard key={index} data={item} />
+          ))}
+        </div> */}
+        <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
+          {posts.map((item, index) => (
+            <HorizontalBlogCard key={index} data={item} />
           ))}
         </div>
       </div>

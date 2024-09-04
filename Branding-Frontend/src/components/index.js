@@ -29,6 +29,7 @@ import EditInTouchBtn from './EditInTouchBtn.jsx'
 import TeamMembersCard from "./TeamMembersCard.jsx";
 import BreadCrumbs from './BreadCrumbs.jsx'
 import VerticalBlogCard from "./VerticalBlogCard.jsx";
+import HorizontalBlogCard from './HorizontalBlogCard.jsx'
 import Footer from "./Footer";
 
 export {
@@ -61,6 +62,7 @@ export {
   TeamMembersCard,
   BreadCrumbs,
   VerticalBlogCard,
+  HorizontalBlogCard,
   SignUpForm,
   LoginForm,
   Footer,
