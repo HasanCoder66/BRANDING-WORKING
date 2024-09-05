@@ -35,72 +35,34 @@ export const createBlog = async (req, res, next) => {
   }
 };
 
-//create login controller ===>
-// export async function login(req, res, next) {
-//   try {
-//     const user = await User.findOne({ email: req.body.email });
-//     // console.log(user);
-//     if (!user) {
-//       // next(404, "User not found")
-//       next(createError(404, `User not found`)); //${message}
-//       return;
-//     }
-//     const isCorrect = await bcryptjs.compare(req.body.password, user.password);
-//     if (!isCorrect) {
-//       // next(400, "Incorrect email or password")
-//       next(createError(400, "Incorrect email or password"));
-//       return;
-//     }
-//     const token = jwt.sign({ user }, process.env.JWT, { expiresIn: "24h" });
-//     // console.log(token);
-//     // console.log(user);
-//     // console.log(user._doc);
-//     const { password, ...other } = user._doc;
-//     // console.log(password);
-//     console.log(other);
-//     let message = "User sign in successfully";
-//     res
-//       .cookie("access_token", token, {
-//         httpOnly: true,
-//       })
-//       .status(200)
-//       .send({
-//         status: "Success",
-//         message: message,
-//         data: other,
-//       });
-//   } catch (error) {
-//     // next(error.status, error.message)
-//     next(createError(error.status, error.message));
-//   }
-// }
 
-//create updateUser controller ===>
-// export const updateUser = async (req, res, next) => {
-//   try {
-//     const userId = req.params.userId;
-//     const updateUser = await User.findByIdAndUpdate(
-//       userId,
-//       { $set: req.body },
-//       { new: true }
-//     );
 
-//     if (!updateUser) {
-//       return next(createError(404, "User not found"));
-//     }
+// updateBlog controller ===>
+export const updateBlog = async (req, res, next) => {
+  try {
+    const userId = req.params.userId;
+    const updateBlog = await Blog.findByIdAndUpdate(
+      userId,
+      { $set: req.body },
+      { new: true }
+    );
 
-//     // console.log(updateUser)
-//     const { password, ...others } = updateUser._doc;
+    if (!updateBlog) {
+      return next(createError(404, "Blog not found"));
+    }
 
-//     res.status(200).json({
-//       status: "success",
-//       message: "User Updated Successfully",
-//       data: others,
-//     });
-//   } catch (error) {
-//     next(createError(error.status || 500, error.message || "Server Error"));
-//   }
-// };
+    console.log(updateBlog)
+    const { password, ...others } = updateBlog._doc;
+
+    res.status(200).json({
+      status: "success",
+      message: "Blog Updated Successfully",
+      data: others,
+    });
+  } catch (error) {
+    next(createError(error.status || 500, error.message || "Server Error"));
+  }
+};
 
 // export const updateUserPassword = async (req, res, next) => {
 //   try {
