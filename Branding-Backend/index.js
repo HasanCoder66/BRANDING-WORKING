@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
 import UserRoute from "./routes/userRoute.js";
-import BlogRoute from "./routes/blogRoute.js";
+import BlogRoute from "./routes/blogRoutes.js";
 // import Stripe from 'stripe';
 
 // mongodb+srv://techexpertjobfinders:S3AjilK4ubU7Al8Q@cluster0.ozqaljr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

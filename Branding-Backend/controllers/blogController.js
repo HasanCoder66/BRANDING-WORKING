@@ -1,153 +1,149 @@
-import bcryptjs from "bcryptjs";
 import Blog from "../models/blogModel.js";
 import { createError } from "../Utils/error.js";
-import jwt from "jsonwebtoken";
-// import nodemailer from "nodemailer";
 // import { responseMessages } from "../constants/responseMessages.js";
 // import { BADREQUEST } from "../constants/httpStatus.js";
 
 // const { MISSING_FIELD_EMAIL, UN_AUTHORIZED_EMAIL } = responseMessages;
-// const { genSalt, hash } = bcryptjs;
 
-//create register controller ===>
-    export const createBlog = async (req, res, next) => {
-        try {
-          // Creating a new blog post based on the input
-          const newBlog = new Blog({
-            title: req.body.title,
-            description: req.body.description,
-            content: req.body.content, // Assuming you're storing blog content
-            category: req.body.category, // Optional: category field
-            featuredImage : req.body.blogImgUrl
-            // author: req.body.author, // Optional: if you have an author field
-            // publishDate: req.body.publishDate || Date.now(), // Optional: default to current date if not provided
-            // tags: req.body.tags, // Optional: array of tags for the post
-          });
-      
-          // Save the blog post to the database
-          const savedBlog = await newBlog.save();
-      
-          // Send the response with the saved blog post
-          res.status(201).json({
-            status: "Success",
-            message: "Blog post created successfully",
-            data: savedBlog,
-          });
-        } catch (error) {
-          // Catching any errors and sending a response
-          next(createError(500, error.message));
-        }
-      };
-
-//create login controller ===>
-export async function login(req, res, next) {
+//create blog controller ===>
+export const createBlog = async (req, res, next) => {
   try {
-    const user = await User.findOne({ email: req.body.email });
-    // console.log(user);
-    if (!user) {
-      // next(404, "User not found")
-      next(createError(404, `User not found`)); //${message}
-      return;
-    }
-    const isCorrect = await bcryptjs.compare(req.body.password, user.password);
-    if (!isCorrect) {
-      // next(400, "Incorrect email or password")
-      next(createError(400, "Incorrect email or password"));
-      return;
-    }
-    const token = jwt.sign({ user }, process.env.JWT, { expiresIn: "24h" });
-    // console.log(token);
-    // console.log(user);
-    // console.log(user._doc);
-    const { password, ...other } = user._doc;
-    // console.log(password);
-    console.log(other);
-    let message = "User sign in successfully";
-    res
-      .cookie("access_token", token, {
-        httpOnly: true,
-      })
-      .status(200)
-      .send({
-        status: "Success",
-        message: message,
-        data: other,
-      });
-  } catch (error) {
-    // next(error.status, error.message)
-    next(createError(error.status, error.message));
-  }
-}
+    // Creating a new blog post based on the input
+    const newBlog = new Blog({
+      title: req.body.title,
+      description: req.body.description,
+      content: req.body.content, // Assuming you're storing blog content
+      category: req.body.category, // Optional: category field
+      featuredImage: req.body.blogImgUrl,
+      // author: req.body.author, // Optional: if you have an author field
+      // publishDate: req.body.publishDate || Date.now(), // Optional: default to current date if not provided
+      // tags: req.body.tags, // Optional: array of tags for the post
+    });
 
-//create updateUser controller ===>
-export const updateUser = async (req, res, next) => {
-  try {
-    const userId = req.params.userId;
-    const updateUser = await User.findByIdAndUpdate(
-      userId,
-      { $set: req.body },
-      { new: true }
-    );
+    // Save the blog post to the database
+    const savedBlog = await newBlog.save();
 
-    if (!updateUser) {
-      return next(createError(404, "User not found"));
-    }
-
-    // console.log(updateUser)
-    const { password, ...others } = updateUser._doc;
-
-    res.status(200).json({
-      status: "success",
-      message: "User Updated Successfully",
-      data: others,
+    // Send the response with the saved blog post
+    res.status(201).json({
+      status: "Success",
+      message: "Blog post created successfully",
+      data: savedBlog,
     });
   } catch (error) {
-    next(createError(error.status || 500, error.message || "Server Error"));
+    // Catching any errors and sending a response
+    next(createError(500, error.message));
   }
 };
 
-export const updateUserPassword = async (req, res, next) => {
-  try {
-    const userId = req.params.userId;
-    const { password, newPassword } = req.body;
+//create login controller ===>
+// export async function login(req, res, next) {
+//   try {
+//     const user = await User.findOne({ email: req.body.email });
+//     // console.log(user);
+//     if (!user) {
+//       // next(404, "User not found")
+//       next(createError(404, `User not found`)); //${message}
+//       return;
+//     }
+//     const isCorrect = await bcryptjs.compare(req.body.password, user.password);
+//     if (!isCorrect) {
+//       // next(400, "Incorrect email or password")
+//       next(createError(400, "Incorrect email or password"));
+//       return;
+//     }
+//     const token = jwt.sign({ user }, process.env.JWT, { expiresIn: "24h" });
+//     // console.log(token);
+//     // console.log(user);
+//     // console.log(user._doc);
+//     const { password, ...other } = user._doc;
+//     // console.log(password);
+//     console.log(other);
+//     let message = "User sign in successfully";
+//     res
+//       .cookie("access_token", token, {
+//         httpOnly: true,
+//       })
+//       .status(200)
+//       .send({
+//         status: "Success",
+//         message: message,
+//         data: other,
+//       });
+//   } catch (error) {
+//     // next(error.status, error.message)
+//     next(createError(error.status, error.message));
+//   }
+// }
 
-    const searchUser = await User.findById(userId);
-    if (!searchUser) {
-      return res.status(404).send({
-        status: "Failed",
-        message: "User Not Found",
-      });
-    }
+//create updateUser controller ===>
+// export const updateUser = async (req, res, next) => {
+//   try {
+//     const userId = req.params.userId;
+//     const updateUser = await User.findByIdAndUpdate(
+//       userId,
+//       { $set: req.body },
+//       { new: true }
+//     );
 
-    if (password) {
-      // console.log(password, "====> req.body.password");
-      // console.log(searchUser.password, "====> DB password");
+//     if (!updateUser) {
+//       return next(createError(404, "User not found"));
+//     }
 
-      const isCorrect = await bcryptjs.compare(password, searchUser.password);
-      if (!isCorrect) {
-        return next(createError(400, "Current password doesn't match"));
-      } else {
-        const salt = await bcryptjs.genSalt(12);
-        const hashedNewPassword = await bcryptjs.hash(newPassword, salt);
+//     // console.log(updateUser)
+//     const { password, ...others } = updateUser._doc;
 
-        const updatedUser = await User.findByIdAndUpdate(
-          userId,
-          { $set: { password: hashedNewPassword } },
-          { new: true }
-        );
+//     res.status(200).json({
+//       status: "success",
+//       message: "User Updated Successfully",
+//       data: others,
+//     });
+//   } catch (error) {
+//     next(createError(error.status || 500, error.message || "Server Error"));
+//   }
+// };
 
-        res.status(200).json({
-          status: "success",
-          message: "User Password Updated Successfully",
-        });
-      }
-    } else {
-      return next(createError(400, "Password is required"));
-    }
-  } catch (error) {
-    next(createError(error.status || 500, error.message || "Server Error"));
-  }
-};
+// export const updateUserPassword = async (req, res, next) => {
+//   try {
+//     const userId = req.params.userId;
+//     const { password, newPassword } = req.body;
+
+//     const searchUser = await User.findById(userId);
+//     if (!searchUser) {
+//       return res.status(404).send({
+//         status: "Failed",
+//         message: "User Not Found",
+//       });
+//     }
+
+//     if (password) {
+//       // console.log(password, "====> req.body.password");
+//       // console.log(searchUser.password, "====> DB password");
+
+//       const isCorrect = await bcryptjs.compare(password, searchUser.password);
+//       if (!isCorrect) {
+//         return next(createError(400, "Current password doesn't match"));
+//       } else {
+//         const salt = await bcryptjs.genSalt(12);
+//         const hashedNewPassword = await bcryptjs.hash(newPassword, salt);
+
+//         const updatedUser = await User.findByIdAndUpdate(
+//           userId,
+//           { $set: { password: hashedNewPassword } },
+//           { new: true }
+//         );
+
+//         res.status(200).json({
+//           status: "success",
+//           message: "User Password Updated Successfully",
+//         });
+//       }
+//     } else {
+//       return next(createError(400, "Password is required"));
+//     }
+//   } catch (error) {
+//     next(createError(error.status || 500, error.message || "Server Error"));
+//   }
+// };
 
 // export const deleteUser = async (req, res, next) => {
 //   try {
