@@ -64,152 +64,117 @@ export const updateBlog = async (req, res, next) => {
   }
 };
 
-// export const updateUserPassword = async (req, res, next) => {
-//   try {
-//     const userId = req.params.userId;
-//     const { password, newPassword } = req.body;
 
-//     const searchUser = await User.findById(userId);
-//     if (!searchUser) {
-//       return res.status(404).send({
-//         status: "Failed",
-//         message: "User Not Found",
-//       });
-//     }
+// deleteBlog controller ===>
+export const deleteBlog = async (req, res, next) => {
+  try {
+    const userId = req.params.userId;
 
-//     if (password) {
-//       // console.log(password, "====> req.body.password");
-//       // console.log(searchUser.password, "====> DB password");
+    const foundBlog = await Blog.findById(userId);
+    if (!foundBlog) {
+      res.status(404).json({
+        status: "failed",
+        message: "Blog Not Found in Database",
+      });
+    }
 
-//       const isCorrect = await bcryptjs.compare(password, searchUser.password);
-//       if (!isCorrect) {
-//         return next(createError(400, "Current password doesn't match"));
-//       } else {
-//         const salt = await bcryptjs.genSalt(12);
-//         const hashedNewPassword = await bcryptjs.hash(newPassword, salt);
+    const deleteBlog = await Blog.findByIdAndDelete(userId);
+    console.log(deleteBlog);
 
-//         const updatedUser = await User.findByIdAndUpdate(
-//           userId,
-//           { $set: { password: hashedNewPassword } },
-//           { new: true }
-//         );
+    res.status(200).json({
+      status: "success",
+      message: "Blog Deleted Successfully",
+    });
+  } catch (error) {
+    next(createError(error.status, error.message));
+  }
+};
 
-//         res.status(200).json({
-//           status: "success",
-//           message: "User Password Updated Successfully",
-//         });
-//       }
-//     } else {
-//       return next(createError(400, "Password is required"));
-//     }
-//   } catch (error) {
-//     next(createError(error.status || 500, error.message || "Server Error"));
-//   }
-// };
 
-// export const deleteUser = async (req, res, next) => {
-//   try {
-//     const userId = req.params.userId;
 
-//     const foundUser = await User.findById(userId);
-//     if (!foundUser) {
-//       res.status(404).json({
-//         status: "failed",
-//         message: "User Not Found in Database",
-//       });
-//     }
+export const getSingleBlog = async (req, res, next) => {
+  try {
+    const userId = req.params.userId;
+    const getBlog = await Blog.findById(userId);
 
-//     const deleteUser = await User.findByIdAndDelete(userId);
-//     console.log(deleteUser);
+    const { ...others } = getBlog._doc;
+    // console.log(getBlog)
+    res.status(200).json({
+      status: "Success",
+      message: " Single Blog Found",
+      data: others,
+    });
+  } catch (error) {
+    next(createError(error.status, error.message));
+  }
+};
 
-//     res.status(200).json({
-//       status: "success",
-//       message: "User Deleted Successfully",
-//     });
-//   } catch (error) {
-//     next(createError(error.status, error.message));
-//   }
-// };
 
-// export const getUser = async (req, res, next) => {
-//   try {
-//     const userId = req.params.userId;
-//     const getUser = await User.findById(userId);
 
-//     const { password, ...others } = getUser._doc;
-//     res.status(200).json({
-//       status: "Success",
-//       message: " Single User Found",
-//       data: others,
-//     });
-//   } catch (error) {
-//     next(createError(error.status, error.message));
-//   }
-// };
+export const getAllBlogs = async (req, res, next) => {
+  try {
+    const getAllBlogs = await Blog.find();
 
-// export const getAllUsers = async (req, res, next) => {
-//   try {
-//     const getAllUser = await User.find();
+    // console.log(getAllBlogs[0]);
+    const allBlogsData = [];
 
-//     // const { password, ...others } = getAllUser._doc;
-//     // console.log(getAllUser[0]);
-//     const allDataUsers = [];
-//     // console.log(allDataUsers, "line no 167");
+    getAllBlogs.map((data) => {
+      // console.log(data);
+      const { ...others } = data._doc;
+      allBlogsData.push(others);
+    });
+    // console.log(allBlogsData, "line no 128");
+    res.status(200).json({
+      status: "Success",
+      message: " All Blogs Found",
+      data: allBlogsData,
+    });
+  } catch (error) {
+    next(createError(error.status, error.message));
+  }
+};
 
-//     getAllUser.map((data) => {
-//       // console.log(data);
-//       const { password, ...others } = data._doc;
-//       allDataUsers.push(others);
-//     });
-//     // console.log(allDataUsers, "line no 175");
-//     res.status(200).json({
-//       status: "Success",
-//       message: " All Users Found",
-//       data: allDataUsers,
-//     });
-//   } catch (error) {
-//     next(createError(error.status, error.message));
-//   }
-// };
 
-// export const sendEmailFunc = async (req, res, next) => {
-//   try {
-//     const toEmail = req.body.toEmail;
-//     const name = req.body.name;
-//     const subject = req.body.subject;
-//     const text = req.body.text;
 
-//     // Log to check if email is received in the request body
-//     console.log("Email to send to:", toEmail);
 
-//     if (!toEmail) {
-//       throw createError(400, "Recipient email not provided");
-//     }
+export const searchBlogs = async (req, res, next) => {
+  const { title } = req.query;
+  console.log(title)
+  const queryObject = {};
 
-//     let transporter = nodemailer.createTransport({
-//       service: "Gmail",
-//       secure: true,
-//       port: 465,
-//       auth: {
-//         user: process.env.FOUNDER_EMAIL, // Sender's email address
-//         pass: process.env.FOUNDER_PASS, // Sender's email password
-//       },
-//     });
+  // Check if blogTitle is provided in the query
+  if (title) {
+    queryObject.title = { $regex: title, $options: "i" }; // Case-insensitive partial match for blogTitle
+    console.log("Query Object:", queryObject); // Log the query object
+  } else {
+    // If no blogTitle is provided, return a 400 error
+    return res.status(400).json({
+      message: "No blog title provided",
+      status: "failed",
+    });
+  }
 
-//     let info = await transporter.sendMail({
-//       from: process.env.FOUNDER_EMAIL, // Sender's email address
-//       to: toEmail, // Receiver's email address
-//       subject, // Email subject
-//       text: ` Dear ${name} \n ${text}`, // Email body
-//     });
+  try {
+    // Use the queryObject to find matching blogs in the database
+    const searchResult = await Blog.find(queryObject).limit(40);
 
-//     console.log("Message sent: %s", info.messageId);
-//     res.status(200).json({
-//       status: "Success",
-//       message: "Email Sent Successfully",
-//     });
-//   } catch (error) {
-//     console.error("Error sending email:", error);
-//     next(createError(error.status || 500, error.message));
-//   }
-// };
+    console.log("Search Result:", searchResult);
+
+    if (searchResult.length > 0) {
+      // If blogs are found, return them
+      res.status(200).json({
+        message: "Blog(s) found",
+        data: searchResult,
+      });
+    } else {
+      // If no blogs are found, return a 404 response
+      res.status(404).json({
+        message: "Blog not found",
+        status: "failed",
+      });
+    }
+  } catch (error) {
+    console.error("Error searching blogs:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
