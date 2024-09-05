@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
 import UserRoute from "./routes/userRoute.js";
+import BlogRoute from "./routes/blogRoute.js";
 // import Stripe from 'stripe';
 
 // mongodb+srv://techexpertjobfinders:S3AjilK4ubU7Al8Q@cluster0.ozqaljr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -23,7 +24,7 @@ const PORT = process.env.PORT || 5500; //
 // Connect to MongoDB =====>
 const connectDB = () => {
   mongoose
-  // process.env.MONGO_URI
+    // process.env.MONGO_URI
     .connect(process.env.MONGO_URI)
     .then(() => {
       console.log("Database Connected");
@@ -39,10 +40,10 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(
   cors({
-      credentials: true,
-      origin: "*",
-      methods: ["POST", "GET", "PUT", "DELETE"]
-    })
+    credentials: true,
+    origin: "*",
+    methods: ["POST", "GET", "PUT", "DELETE"],
+  })
 );
 
 // middlewares =====>
@@ -51,9 +52,8 @@ app.use(
 // });
 
 app.use("/api/auth", UserRoute);
-// app.use("/api/blog", blogRoutes);
+app.use("/api/blog", BlogRoute);
 // app.use("/api/upload", uploadRoute);
-
 
 //Error Middleware ====>
 app.use((err, req, res, next) => {
@@ -70,7 +70,6 @@ app.use((err, req, res, next) => {
     stack: errorStack,
   });
 });
-
 
 // SERVER LISTENING ON THE PORT
 app.listen(PORT, () => {

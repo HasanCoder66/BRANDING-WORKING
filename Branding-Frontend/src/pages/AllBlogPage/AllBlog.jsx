@@ -8,16 +8,16 @@ const AllBlog = () => {
     <div className="landingContainer pt-[5rem]">
       <div className="bg-white">
         <BreadCrumbs />
-        {/* <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
+        <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
           {posts.map((item, index) => (
             <VerticalBlogCard key={index} data={item} />
           ))}
-        </div> */}
-        <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
+        </div>
+        {/* <div className="flex flex-wrap gap-[20px] justify-around  p-[2rem]">
           {posts.map((item, index) => (
             <HorizontalBlogCard key={index} data={item} />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
