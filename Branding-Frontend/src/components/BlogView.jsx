@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { CREATEBLOG_URL } from "../constants/apis";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function BlogView() {
   const [title, setTitle] = useState("");
@@ -36,10 +37,32 @@ function BlogView() {
 
     try {
       const blogResult = await axios.post(`/api/${CREATEBLOG_URL}`, blogData);
-      console.log(blogResult);
+      console.log(blogResult, "blog result ===>");
+      console.log(blogResult?.data?.status, 'data ===>');
+
+      if (blogResult?.data?.status === "Success") {
+        Swal.fire({
+          title: "Good job!",
+          text: "user SignUp successfully!",
+          icon: "success",
+        });
+
+        setTimeout(() => {
+          navigate("/about");
+        }, 3000);
+      }
     } catch (error) {
       console.log(error);
+      // console.log(error.response.data.message.includes("duplicate key"));
+      // if (error.response.data.message.includes("duplicate key")) {
+      //   Swal.fire({
+      //     icon: "error",
+      //     title: "Oops...",
+      //     text: `Email Already Registered`,
+      //   });
+      // }
     }
+    
   };
   return (
     <form
