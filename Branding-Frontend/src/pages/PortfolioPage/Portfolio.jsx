@@ -1,8 +1,12 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
-import { BlogCard } from "../../components";
-import data from '../ServicesPage/servicesData.js'
+import React from "react";
+import Card from "react-bootstrap/Card";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link } from "react-router-dom";
+// import { BlogCard } from "../../components";
+// import data from '../ServicesPage/servicesData.js'
 
+// console.log(data)
 const Portfolio = () => {
   return (
     <>
@@ -14,52 +18,46 @@ const Portfolio = () => {
         />
         <link rel="canonical" href="/portfolio" />
       </Helmet>
-      {/* <div className="flex flex-wrap justify-evenly min-h-[100vh] py-[90px] landingContainer">
-          <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
-            {data.map(({ data }, index) => (
-            <div
-              key={index}
-              style={{ width: "350px", height: "381px" }}
-              className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
-            >
-              <BlogCard data={data}/>
-            </div>
-          ))}
+      <Link  
+      // to={routeLink}
+      >
+    <Card 
+    // key={id}
+     className="  object-contain overflow-hidden border-2px-[#fca311]">
+      <Card.Img
+        // variant="top"
+        // src={imgUrl}s
+        src="https://img.freepik.com/free-photo/one-person-typing-laptop-office-generated-by-ai_188544-39272.jpg?size=626&ext=jpg&uid=R135466208&ga=GA1.1.1540570184.1698578526&semt=sph"
+        className="group-hover/item:rotate-3 duration-300 ease-out scale-110"
+      />
+      <Card.Body className="p-[10px] flex justify-between flex-col">
+        <div className="group-hover/item:-translate-y-[2rem] relative duration-300 ease-out z-10">
+          <Card.Title className="text-theme-red text-2xl font-bold my-5">
+            {/* {title} */}
+            new project
+          </Card.Title>
+          <Card.Text className="text-theme-black text-md my-4 mb-0">
+            {/* {desc} */}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis unde expedita vitae ipsam. Distinctio ex, esse dolorum saepe quo tenetur, accusamus minus adipisci dignissimos aspernatur expedita, fuga accusantium nisi! Quaerat.20
+          </Card.Text>
+        </div>
+        <Link 
+        // to={routeLink}
+        >
+          <div
+            variant="primary"
+            className="mt-[10px] text-white text-base group-hover/item:text-theme-red duration-300 ease-out -translate-y-8"
+          >
+            {/* {buttonContent}  */}
+            han jan
+            <ArrowForwardIcon />
           </div>
-      </div> */}
+        </Link>
+      </Card.Body>
+    </Card>
+    </Link>
     </>
   );
 };
 
 export default Portfolio;
-
-// import React from "react";
-// import { BlogCard } from "../../components";
-// // import { blogCardData } from "../dummyData";
-
-// const Portfolio = () => {
-//   return (
-//     <div className="bg-[#FEF6F5] my-20">
-//       <div className="text-center py-[5rem]">
-//         <p className="text-theme-yellow text-[2.3rem]">LATEST NEWS</p>
-//         <p className="text-theme-red text-[3.5rem] font-semibold">
-//           Our Latest Articles
-//         </p>
-//       </div>
-//       <div className="blogCardCont p-16 flex flex-wrap items-center justify-between ">
-//         {/* {blogCardData.map(({ name, desc, imgUrl }, index) => (
-//           ))} */}
-//           <div
-//             // key={index}
-//             style={{ width: "307px", height: "381px" }}
-//             className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
-//           >
-//             {/* name={name} desc={desc} imgUrl={imgUrl} */}
-//             <BlogCard  />
-//           </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Portfolio;

@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ data }) => {
-  // console.log(data.imgUrl)
+  // console.log(CardData)
   const { id, desc, imgUrl, title, buttonContent, routeLink } = data;
   return (
     <Link to={routeLink}>
