@@ -49,7 +49,7 @@ const Portfolio = () => {
             className="mt-[10px] text-white text-base group-hover/item:text-theme-red duration-300 ease-out -translate-y-8"
           >
             {/* {buttonContent}  */}
-            han jan
+            new btn
             <ArrowForwardIcon />
           </div>
         </Link>
