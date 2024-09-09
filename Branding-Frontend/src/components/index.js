@@ -6,10 +6,7 @@ import Button from "./Button";
 import TextEffect from "./TextEffects";
 import ServiceSectionHead from "./ServiceSectionHead";
 import ServicesCards from "./ServicesCards";
-import Testimonials from "./Testimonials";
-import TestimonialSlider from "./TestimonialSlider";
-import ClientReview from "./ClientReview";
-import CarouselCmp from "./CarouselCmp";
+import TestimonialCard from "./TestimonialCard.jsx";
 import Contact from "./Contact";
 import MapLocation from "./MapLocation";
 import BlogCard from "./BlogCard";
@@ -29,7 +26,9 @@ import EditInTouchBtn from './EditInTouchBtn.jsx'
 import TeamMembersCard from "./TeamMembersCard.jsx";
 import BreadCrumbs from './BreadCrumbs.jsx'
 import VerticalBlogCard from "./VerticalBlogCard.jsx";
-import HorizontalBlogCard from './HorizontalBlogCard.jsx'
+import HorizontalBlogCard from './HorizontalBlogCard.jsx';
+import HorizontalPortfolioCard from './HorizontalPortfolioCard.jsx';
+import VerticalMobilePortfolioCard from './VerticalMobilePortfolioCard.jsx';
 import Footer from "./Footer";
 
 export {
@@ -41,10 +40,7 @@ export {
   TextEffect,
   ServiceSectionHead,
   ServicesCards,
-  Testimonials,
-  TestimonialSlider,
-  ClientReview,
-  CarouselCmp,
+  TestimonialCard,
   Contact,
   MapLocation,
   BlogCard,
@@ -63,6 +59,8 @@ export {
   BreadCrumbs,
   VerticalBlogCard,
   HorizontalBlogCard,
+  HorizontalPortfolioCard,
+  VerticalMobilePortfolioCard,
   SignUpForm,
   LoginForm,
   Footer,

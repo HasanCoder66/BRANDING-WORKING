@@ -1,63 +1,84 @@
-import { Helmet } from "react-helmet-async";
-import React from "react";
-import Card from "react-bootstrap/Card";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
-// import { BlogCard } from "../../components";
-// import data from '../ServicesPage/servicesData.js'
+import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import serviceCover from "../../assets/serviceCover.png";
+import {  HorizontalPortfolioCard, VerticalMobilePortfolioCard } from "../../components";
 
-// console.log(data)
-const Portfolio = () => {
+const PortfolioPage = () => {
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      // Check if the screen width is less than the breakpoint for medium devices (768px)
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: true, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
   return (
-    <>
-      <Helmet>
-        <meta
-          name="description"
-          content="Where Imagination Meets Innovation in Web Development, Design, SEO,
-            and Digital Mastery"
+    <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
+      <div data-aos="zoom-in-left" className="w-[100vw] ">
+        <img
+          // src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
+          src={serviceCover}
+          alt="Service-Cover"
+          className="h-[50vh] w-[100%] object-cover	"
         />
-        <link rel="canonical" href="/portfolio" />
-      </Helmet>
-      <Link  
-      // to={routeLink}
-      >
-    <Card 
-    // key={id}
-     className="  object-contain overflow-hidden border-2px-[#fca311]">
-      <Card.Img
-        // variant="top"
-        // src={imgUrl}s
-        src="https://img.freepik.com/free-photo/one-person-typing-laptop-office-generated-by-ai_188544-39272.jpg?size=626&ext=jpg&uid=R135466208&ga=GA1.1.1540570184.1698578526&semt=sph"
-        className="group-hover/item:rotate-3 duration-300 ease-out scale-110"
-      />
-      <Card.Body className="p-[10px] flex justify-between flex-col">
-        <div className="group-hover/item:-translate-y-[2rem] relative duration-300 ease-out z-10">
-          <Card.Title className="text-theme-red text-2xl font-bold my-5">
-            {/* {title} */}
-            new project
-          </Card.Title>
-          <Card.Text className="text-theme-black text-md my-4 mb-0">
-            {/* {desc} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis unde expedita vitae ipsam. Distinctio ex, esse dolorum saepe quo tenetur, accusamus minus adipisci dignissimos aspernatur expedita, fuga accusantium nisi! Quaerat.20
-          </Card.Text>
-        </div>
-        <Link 
-        // to={routeLink}
-        >
+      </div>
+      <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem] pt-[2rem]">
+        <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] uppercase text-center font-bold">
+          Our Client Completed<span className="text-white"> Projects Work</span>
+        </h2>
+      </div>
+      <div className=" blogCardCont p-16 flex flex-wrap  pt-[3rem] items-center justify-evenly ">
+        {isMobile ? <VerticalMobilePortfolioCard /> : <HorizontalPortfolioCard />}
+        
+        
+        {/* {data.map((data, index) => (
           <div
-            variant="primary"
-            className="mt-[10px] text-white text-base group-hover/item:text-theme-red duration-300 ease-out -translate-y-8"
+            key={index}
+            style={{ width: "380px", height: "440px" }}
+            className="bg-[#ffffff] group/item overflow-hidden mb-10 cursor-pointer"
           >
-            {/* {buttonContent}  */}
-            new btn
-            <ArrowForwardIcon />
+            <BlogCard data={data} />
           </div>
-        </Link>
-      </Card.Body>
-    </Card>
-    </Link>
-    </>
+        ))} */}
+      </div>
+    </div>
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;
