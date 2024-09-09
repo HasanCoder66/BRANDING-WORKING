@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import serviceCover from "../../assets/serviceCover.png";
+import portfolioCover from "../../assets/PortfolioCover.png";
 import {  HorizontalPortfolioCard, VerticalMobilePortfolioCard } from "../../components";
 
 const PortfolioPage = () => {
@@ -53,8 +53,8 @@ const PortfolioPage = () => {
       <div data-aos="zoom-in-left" className="w-[100vw] ">
         <img
           // src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710948265/branding%20hopes/service_cover_hn6ehv.jpg"
-          src={serviceCover}
-          alt="Service-Cover"
+          src={portfolioCover}
+          alt="portfolioCover"
           className="h-[50vh] w-[100%] object-cover	"
         />
       </div>
