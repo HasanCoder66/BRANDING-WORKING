@@ -12,7 +12,7 @@ function StarIcon() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="h-5 w-5 text-yellow-700"
+      className="h-50 w-50 text-yellow-700"
     >
       <path
         fillRule="evenodd"
@@ -25,42 +25,76 @@ function StarIcon() {
  
 export default function TestimonialCard() {
   return (
-    <Card color="transparent" shadow={false} className="w-full max-w-[26rem]">
+    // color="transparent"
+    <>
+    <Card  shadow={false} className="w-full sm:max-w-[20rem] md:max-w-[60rem] lg:max-w-[76rem] mt-[4rem]">
       <CardHeader
-        color="transparent"
+        // color="transparent"
         floated={false}
         shadow={false}
-        className="mx-0 flex items-center gap-4 pt-0 pb-8"
+        className="mx-0 flex items-center gap-4 pt-0 pb-8 pl-[10px]"
       >
         <Avatar
-          size="lg"
-          variant="circular"
+          // size="sm"
+          // variant="circular"
           src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
           alt="tania andrew"
+          className="rounded-full w-[100px] h-[100px] border-[4px] border-[#fca311]"
         />
         <div className="flex w-full flex-col gap-0.5">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center ">
+            <Typography variant="h5" color="blue-gray">
+              Alexendra
+            </Typography>
+           
+          </div>
+          <Typography color="blue-gray">CEO of Webdeezien</Typography>
+        </div>
+      </CardHeader>
+      <CardBody className="mb-6 px-5">
+        <Typography>
+          {/* &quot; */}
+          Creative Tim has been a game-changer for all my design projects! Their templates are top-notch, and they've made my freelance work so much easier and enjoyable. Plus, the pricing is super affordable, and the team is incredibly supportive and humble. Highly recommend! 🎨🙌
+          {/* &quot; */}
+        </Typography>
+      </CardBody>
+    </Card>
+
+    <Card  shadow={false} className="w-full sm:max-w-[20rem] md:max-w-[60rem] lg:max-w-[76rem] mt-[4rem]">
+      <CardHeader
+        // color="transparent"
+        floated={false}
+        shadow={false}
+        className="mx-0 flex items-center gap-4 pt-0 pb-8 pl-[10px]"
+      >
+        <Avatar
+          // size="sm"
+          // variant="circular"
+          src="https://media.licdn.com/dms/image/v2/D5603AQHAN2xQnQGNSg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686194483238?e=1731542400&v=beta&t=pZZNO3hpHxTjv578NUkCz0oJJjVEaqActK2MWiI3dD8"
+          alt="tania andrew"
+          className="rounded-full w-[100px] h-[100px] border-[4px] border-[#fca311]"
+        />
+        <div className="flex w-full flex-col gap-0.5">
+          <div className="flex items-center ">
             <Typography variant="h5" color="blue-gray">
               Tania Andrew
             </Typography>
-            <div className="5 flex items-center gap-0">
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-            </div>
+           
           </div>
           <Typography color="blue-gray">Frontend Lead @ Google</Typography>
         </div>
       </CardHeader>
-      <CardBody className="mb-6 p-0">
+      <CardBody className="mb-6 px-5">
         <Typography>
-          &quot;I found solution to all my design needs from Creative Tim. I use
+          {/* &quot; */}
+          I found solution to all my design needs from Creative Tim. I use
           them as a freelancer in my hobby projects for fun! And its really
-          affordable, very humble guys !!!&quot;
+          affordable, very humble guys !!!
+          {/* &quot; */}
         </Typography>
       </CardBody>
     </Card>
+
+    </>
   );
 }

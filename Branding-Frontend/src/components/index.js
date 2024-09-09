@@ -22,6 +22,7 @@ import AboutRightCard from "./AboutRightCard";
 import AboutLeftCard from "./AboutLeftCard";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
+import Testimonials from "./Testimonials.jsx";
 import EditInTouchBtn from './EditInTouchBtn.jsx'
 import TeamMembersCard from "./TeamMembersCard.jsx";
 import BreadCrumbs from './BreadCrumbs.jsx'
@@ -41,6 +42,7 @@ export {
   ServiceSectionHead,
   ServicesCards,
   TestimonialCard,
+  Testimonials,
   Contact,
   MapLocation,
   BlogCard,

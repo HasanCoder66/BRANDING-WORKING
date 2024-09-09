@@ -12,6 +12,7 @@ import {
   ServiceSectionHead,
   ServicesCards,
   TestimonialCard,
+  Testimonials,
 } from "../../components";
 
 const HomePage = () => {
@@ -85,7 +86,7 @@ const HomePage = () => {
         </div>
 
         <Business />
-        <TestimonialCard />
+        <Testimonials />
         <CTA />
         <Contact />
       </div>
