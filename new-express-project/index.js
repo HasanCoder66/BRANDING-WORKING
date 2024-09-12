@@ -4,8 +4,8 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
-import UserRoute from "./routes/userRoute.js";
-import BlogRoute from "./routes/blogRoutes.js";
+// import UserRoute from "./routes/userRoute.js";
+// import BlogRoute from "./routes/blogRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -35,8 +35,8 @@ app.use(
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
-app.use("/api/auth", UserRoute);
-app.use("/api/blog", BlogRoute);
+// app.use("/api/auth", UserRoute);
+// app.use("/api/blog", BlogRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
