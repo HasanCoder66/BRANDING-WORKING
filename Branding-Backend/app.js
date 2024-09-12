@@ -4,8 +4,8 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
-// import UserRoute from "./routes/userRoute.js";
-// import BlogRoute from "./routes/blogRoutes.js";
+import UserRoute from "./routes/userRoute.js";
+import BlogRoute from "./routes/blogRoutes.js";
 // import Stripe from 'stripe';
 
 // mongodb+srv://techexpertjobfinders:S3AjilK4ubU7Al8Q@cluster0.ozqaljr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -51,8 +51,8 @@ app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
 
-// app.use("/api/auth", UserRoute);
-// app.use("/api/blog", BlogRoute);
+app.use("/api/auth", UserRoute);
+app.use("/api/blog", BlogRoute);
 // app.use("/api/upload", uploadRoute);
 
 //Error Middleware ====>
