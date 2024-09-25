@@ -12,7 +12,6 @@ import webDev from "../../assets/servicesImages/web design & development.jpg";
 const data = [
   {
     id: "1",
-    // Icon : <CodeIcon />,
     imgUrl: webDev,
     title: "Web Design & Development",
     desc:
