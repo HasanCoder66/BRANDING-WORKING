@@ -37,6 +37,8 @@ export default function TestimonialCard() {
         <Avatar
           // size="sm"
           // variant="circular"
+          width={1480}
+          height={1480}
           src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
           alt="tania andrew"
           className="rounded-full w-[100px] h-[100px] border-[4px] border-[#fca311]"
@@ -70,6 +72,8 @@ export default function TestimonialCard() {
         <Avatar
           // size="sm"
           // variant="circular"
+          width={400}
+          height={400}
           src="https://media.licdn.com/dms/image/v2/D5603AQHAN2xQnQGNSg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686194483238?e=1731542400&v=beta&t=pZZNO3hpHxTjv578NUkCz0oJJjVEaqActK2MWiI3dD8"
           alt="tania andrew"
           className="rounded-full w-[100px] h-[100px] border-[4px] border-[#fca311]"

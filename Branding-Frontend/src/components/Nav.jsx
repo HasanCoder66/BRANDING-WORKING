@@ -17,7 +17,8 @@ const Nav = ({ openNav }) => {
           <Link to="/">
             <div className=" cursor-pointer w-[100%]">
               <img
-                // src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710850875/branding%20hopes/Icon_PNG-02_ypgqyn.png "
+              width={308} 
+              height={88}
                 src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710929421/branding%20hopes/Logo_PNG_u07vul.png"
                 className="w-[220px] h-[80px] object-contain "
                 alt="Branding Hopes"
