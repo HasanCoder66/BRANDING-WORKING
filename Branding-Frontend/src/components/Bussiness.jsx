@@ -11,10 +11,13 @@ const FeatureCard = ({ icon, title, content, index }) => (
     <div
       className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-[#14213d]`}
     >
-      <img 
-      width={32}
-      height={33}
-      src={icon} alt="star" className="w-[50%] h-[50%] object-contain" />
+      <img
+        width={32}
+        height={33}
+        src={icon}
+        alt="star"
+        className="w-[50%] h-[50%] object-contain"
+      />
     </div>
     <div className="flex-1 flex flex-col ml-3">
       <h4 className="font-poppins font-semibold text-black text-[18px] leading-[23.4px] mb-1">
@@ -28,8 +31,10 @@ const FeatureCard = ({ icon, title, content, index }) => (
 );
 
 const Business = () => (
-    // className={`${layout.section}  bg-white w-[80%]`}
-  <section id="features" className={`${layout.section} p-[2rem]  bg-white w-[80%]`}>
+  <section
+    id="features"
+    className={`${layout.section} p-[2rem]  bg-white w-[80%]`}
+  >
     <div className={`${layout.sectionInfo} `}>
       <h2 className={styles.heading2}>
         We drive the business, <br className="sm:block hidden" /> while you

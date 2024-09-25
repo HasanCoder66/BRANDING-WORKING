@@ -40,9 +40,9 @@ function Contact() {
         <div className=" mx-auto my-auto  sm:px-6 w-[100vw] min-h-[370px] lg:px-8  pb-[4rem]">
           <div className="overflow-hidden lg:px-[120px] ">
             <div className="pb-[3rem] pt-[4rem]">
-              <h1 className="text-[2rem] text-white font-bold uppercase">
+              <h2 className="text-[2rem] text-white font-bold uppercase">
                 Any Confusion ? Just Email Us. <span className="text-[#fca311]">Thank You For Your Trust!</span>
-              </h1>
+              </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
               <div className="p-6 mr-2 bg-[#e5e5e5] sm:rounded-lg">

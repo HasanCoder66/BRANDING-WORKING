@@ -11,7 +11,6 @@ const Nav = ({ openNav }) => {
 
   return (
     <>
-      {/* bg-[#14213d] */}
       <div className="navContainer w-[100%] fixed z-[10000] flex items-center justify-between px-[10px] h-[11vh] bg-transparent shadow-md">
         <div className="md:w-[100%] w-fit md:flex items-center justify-between h-[100%] lg:mx-[50px]">
           <Link to="/">
@@ -23,7 +22,6 @@ const Nav = ({ openNav }) => {
                 className="w-[220px] h-[80px] object-contain "
                 alt="Branding Hopes"
               />
-              {/* BrandingHopes */}
             </div>
           </Link>
           <div className="flex lg:gap-[50px] gap-[15px]">
