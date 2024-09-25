@@ -52,8 +52,6 @@ const Hero = () => {
               variants={item}
               className="subText text-[1.5rem] font-normal text-[#e5e5e5]"
             >
-              {/* Empower Your Presence with Branding Hopes */}
-              {/* Boost Your Brand with Branding Hopes */}
               Build Your Brand with Branding Hopes
             </motion.p>
             <motion.div
@@ -61,8 +59,7 @@ const Hero = () => {
               className="landingTitle text-7xl font-bold text-[#fca311]"
             >
               <span className="text-[#fca311]">
-                Turning Your{" "}
-                <br />
+                Turning Your <br />
                 <span className="">
                   <TextEffect className="landingTitle " />{" "}
                 </span>
@@ -90,20 +87,6 @@ const Hero = () => {
               <Button text="Our Services" link="/services" />
             </motion.div>
           </motion.div>
-          {/* <div className="right flex-1 flex items-center justify-center ">
-            <motion.div
-              variants={imgVariant}
-              initial="initial"
-              animate="animate"
-              className="imgContainer w-[600px]"
-            >
-              <motion.img
-                src="https://res.cloudinary.com/dpvxkqhi8/image/upload/v1710879604/branding%20hopes/hero_img_png_cmc52t.png"
-                alt=""
-                className="w-[100%] object-contain"
-              />
-            </motion.div>
-          </div> */}
         </div>
       </div>
     </>
