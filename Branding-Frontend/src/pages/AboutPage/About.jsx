@@ -34,48 +34,35 @@ const AboutPage = () => {
   var fifthBoxText = `Our team consists of skilled professionals with diverse backgrounds in marketing, design, and technology. We foster a culture of continuous learning to stay ahead of industry trends and achieve your goals.
  Feel free to make any adjustments to better fit your brand!
  `;
-  // let ourMissionImg = ourMission;
-  // let ourValuesImg = ourValues;
-  // let ourTeamImg = ourTeam;
-  // let whyChooseUsImg = whyChooseUs;
-  // let ourServiceImg = ourService;
 
   useEffect(() => {
     AOS.init({
-      // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: "aos-init", // class applied after initialization
-      animatedClassName: "aos-animate", // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 1000, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-      once: true, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      disable: false,
+      startEvent: "DOMContentLoaded",
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+      offset: 120,
+      delay: 0,
+      duration: 1000,
+      easing: "ease",
+      once: true,
+      mirror: false,
+      anchorPlacement: "top-bottom",
     });
   }, []);
 
   useEffect(() => {
     const handleResize = () => {
-      // Check if the screen width is less than the breakpoint for medium devices (768px)
       setIsMobile(window.innerWidth < 768);
     };
-
-    // Add event listener to handle window resize
     window.addEventListener("resize", handleResize);
 
-    // Initial check
     handleResize();
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -85,26 +72,25 @@ const AboutPage = () => {
       <Helmet>
         <meta
           name="description"
-          content="At Branding Hopes, we transcend the conventional role of a digital
-          marketing agency. We are your steadfast partners, committed to
-          propelling your success to new heights."
+          content="At Branding Hopes, we go beyond digital marketing. As your dedicated partner, we are committed to driving your brand's success and creating impactful growth."
         />
-        <link rel="canonical" href="/about" />
+        <link rel="canonical" href="https://www.brandinghopes.com/about" />
       </Helmet>
+
       <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
         <div data-aos="fade-down" className="w-[100vw] ">
           <img
             src={aboutCover}
+            width={3240}
+            height={1820}
             alt="About-Cover"
             className="h-[50vh] w-[100%] object-cover	"
           />
         </div>
-        {/*  */}
-        {/* md:7/12 lg:w-6/12  */}
         <div className="flex flex-col items-center gap-[2rem] lg:px-[8rem] pt-[2rem]">
-          <h2 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
+          <h1 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
             <span className="text-white">About </span> Branding Hopes
-          </h2>
+          </h1>
           <p className=" text-white text-center">
             At <span className="text-[#fca311]">Branding Hopes</span>, we
             transcend the conventional role of a digital marketing agency. We
@@ -136,9 +122,8 @@ const AboutPage = () => {
               heading="Our Services"
               imgLink={ourService}
             />
-            {/* imgLink={cardImgLink} */}
             <AboutLeftCard
-              text={thirdBoxText}
+              text={fourthBoxText}
               heading="Why Choose Us?"
               imgLink={whyChooseUs}
             />

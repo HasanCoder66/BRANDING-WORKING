@@ -14,6 +14,8 @@ const TeamMembersCard = ({ imgUrl, name, city, Role, desc, visitLink }) => {
               src={imgUrl}
               alt={`${name}s Images`}
               title={name}
+              width={160}
+              height={160}
               className="rounded-full w-[150px] h-[150px] border-[4px] border-[#fca311]"
             />
           </div>

@@ -16,7 +16,10 @@ export default function AboutRightCard({ text, heading, imgLink, lastLine }) {
             <EditInTouchBtn linktoRoute="/contact" />
           </div>
           <div className="md:5/12 lg:w-5/12">
-            <img src={imgLink} alt="ourMission" />
+            <img 
+            width={3240}
+            height={1820}
+            src={imgLink} alt="ourMission" />
           </div>
         </div>
       </div>
