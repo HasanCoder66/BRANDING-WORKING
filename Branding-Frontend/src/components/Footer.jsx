@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-wrap justify-between">
         <div className="w-full md:w-1/3">
           <div className="mb-[10px]">
-            <h5 className="text-[2.5rem] font-normal mb-1">Contact Info</h5>
+            <h3 className="text-[2.5rem] font-normal mb-1">Contact Info</h3>
             <div className="flex h-5 w-[70%] ">
               <hr className="border-[1.2px] w-[20%] border-theme-yellow" />
               <hr className="border-[1.2px] w-[80%] " />
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-1/3">
           <div className="mb-[10px]">
-            <h5 className="text-[2.5rem] font-normal mb-1">Quick Links</h5>
+            <h3 className="text-[2.5rem] font-normal mb-1">Quick Links</h3>
             <div className="flex h-5 w-[70%] ">
               <hr className="border-[1.2px] w-[20%] border-theme-yellow" />
               <hr className="border-[1.2px] w-[80%]" />
@@ -152,7 +152,7 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-1/3 ">
           <div className="mb-[10px]">
-            <h5 className="text-[2.5rem] font-normal mb-1">Our Company</h5>
+            <h3 className="text-[2.5rem] font-normal mb-1">Our Company</h3>
             <div className="flex h-5 w-[70%] ">
               <hr className="border-[1.2px] w-[20%] border-theme-yellow" />
               <hr className="border-[1.2px] w-[80%]" />

@@ -5,9 +5,9 @@ const ServiceSectionHead = () => {
     <div className="">
       <div className="flex flex-col items-center mt-[2rem]">
         <div className="mt-[20px] uppercase text-center flex flex-col gap-[10px]">
-          <h2 className="text-[#fca311] text-5xl font-bold tracking-widest	 serviceTitle">
+          <h1 className="text-[#fca311] text-5xl font-bold tracking-widest	 serviceTitle">
             Crafting Success in New{" "}
-          </h2>
+          </h1>
           <span className="text-[#e5e5e5] text-5xl font-bold tracking-widest	 serviceTitle">
             York's Digital Landscape{" "}
           </span>
