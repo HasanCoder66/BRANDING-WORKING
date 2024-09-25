@@ -26,90 +26,90 @@ function SignUpForm() {
   console.log(password);
   console.log(cPassword);
 
-    const signupHandlerWithMongoDb = async (e) => {
-      e.preventDefault();
-      if (
-        email === "" ||
-        fullName === "" ||
-        password === "" ||
-        cPassword === ""
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Missing Fields!",
-        });
-      } else if (password.length < 8) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Password must be at least 8 characters long!",
-        });
-      } else if (password.length < 8) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Password must be at least 8 characters long!",
-        });
-      } else if (password !== cPassword) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Password does not match!",
-        });
-      } else if (
-        email != "" &&
-        !email
-          .toLowerCase()
-          .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          )
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Email is Not Valid!",
-          timer: 1500,
-        });
-      } else {
-        // console.log("signup handler is working");
-        const userCredential = {
-          username: fullName,
-          email,
-          password,
-        };
-        // console.log(userCredential);
+  const signupHandlerWithMongoDb = async (e) => {
+    e.preventDefault();
+    if (
+      email === "" ||
+      fullName === "" ||
+      password === "" ||
+      cPassword === ""
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Missing Fields!",
+      });
+    } else if (password.length < 8) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Password must be at least 8 characters long!",
+      });
+    } else if (password.length < 8) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Password must be at least 8 characters long!",
+      });
+    } else if (password !== cPassword) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Password does not match!",
+      });
+    } else if (
+      email != "" &&
+      !email
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Email is Not Valid!",
+        timer: 1500,
+      });
+    } else {
+      // console.log("signup handler is working");
+      const userCredential = {
+        username: fullName,
+        email,
+        password,
+      };
+      // console.log(userCredential);
 
-        try {
-          const response = await axios.post(`/api/${SIGNUP_URL}`, userCredential);
-          console.log(response.data.data);
-          // .data.data
-          dispatch(signupSuccess(response.data.data));
+      try {
+        const response = await axios.post(`/api/${SIGNUP_URL}`, userCredential);
+        console.log(response.data.data);
+        // .data.data
+        dispatch(signupSuccess(response.data.data));
 
-          if (response.statusText === "OK") {
-            Swal.fire({
-              title: "Good job!",
-              text: "user SignUp successfully!",
-              icon: "success",
-            });
+        if (response.statusText === "OK") {
+          Swal.fire({
+            title: "Good job!",
+            text: "user SignUp successfully!",
+            icon: "success",
+          });
 
-            setTimeout(() => {
-              navigate("/blog");
-            }, 3000);
-          }
-        } catch (error) {
-          console.log(error);
-          console.log(error.response.data.message.includes("duplicate key"));
-          if (error.response.data.message.includes("duplicate key")) {
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: `Email Already Registered`,
-            });
-          }
+          setTimeout(() => {
+            navigate("/blog");
+          }, 3000);
+        }
+      } catch (error) {
+        console.log(error);
+        console.log(error.response.data.message.includes("duplicate key"));
+        if (error.response.data.message.includes("duplicate key")) {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: `Email Already Registered`,
+          });
         }
       }
-    };
+    }
+  };
 
   // const [capVal, setCapVal] = useState(null);
   // const myVariable = import.meta.env.VITE_SITE_KEY;
@@ -119,7 +119,7 @@ function SignUpForm() {
       <div className="flex justify-center w-full items-center gap-[4rem]  px-12 py-10">
         <form className="w-[50%]  p-10 shadow-lg bg-white   rounded-lg">
           <h1 className="text-2xl block  font-bold text-theme-red text-center uppercase">
-          Join Branding Hopes!
+            Join Branding Hopes!
             <br />
           </h1>
           <div className="mt-4 relative">
@@ -194,7 +194,7 @@ function SignUpForm() {
               type="submit"
               className='border-2 text-2xl overflow-hidden w-full font-semibold className="text-[1.6rem] leading-[1.6rem] relative z-10 bg-theme-red text-white px-[2rem] py-[1.2rem] rounded-lg transition-all before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-yellow before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300  '
               // disabled:cursor-not-allowed
-                onClick={signupHandlerWithMongoDb}
+              onClick={signupHandlerWithMongoDb}
             >
               Sign Up
             </button>
@@ -209,7 +209,6 @@ function SignUpForm() {
             </p>
           </div>
         </form>
-        
       </div>
     </div>
   );

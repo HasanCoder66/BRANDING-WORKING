@@ -1,4 +1,9 @@
-import { createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/HomePage/Home";
 import Portfolio from "./pages/PortfolioPage/Portfolio";
@@ -23,9 +28,13 @@ const Layout = () => {
   return (
     <div className="app">
       <MobileNav nav={nav} closeNav={closeNav} />
-      {!hideNavAndFooter.includes(location.pathname) && <Nav openNav={openNav} />} {/* Nav sirf un pages pe dikhao jo hideNavAndFooter me nahi hain */}
+      {!hideNavAndFooter.includes(location.pathname) && (
+        <Nav openNav={openNav} />
+      )}{" "}
+      {/* Nav sirf un pages pe dikhao jo hideNavAndFooter me nahi hain */}
       <Outlet />
-      {!hideNavAndFooter.includes(location.pathname) && <Footer />} {/* Footer sirf un pages pe dikhao jo hideNavAndFooter me nahi hain */}
+      {!hideNavAndFooter.includes(location.pathname) && <Footer />}{" "}
+      {/* Footer sirf un pages pe dikhao jo hideNavAndFooter me nahi hain */}
     </div>
   );
 };
