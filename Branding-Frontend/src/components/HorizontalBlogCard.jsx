@@ -6,10 +6,9 @@ const VerticalBlogCard = ({ data }) => {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
-
   return (
     <div
-    key={data?.slug}
+      key={data?.slug}
       className="flex flex-col gap-3 rounded-lg border bg-[#F4F4F5] p-3 lg:flex-row"
     >
       <figure className="relative mt-1 h-24 min-w-40 overflow-hidden bg-gray-200">

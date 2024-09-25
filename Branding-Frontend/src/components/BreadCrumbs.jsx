@@ -27,9 +27,9 @@ export default function CollapsedBreadcrumbs() {
           <p className="font-medium text-[20px]">Blog Category</p>
         </Breadcrumbs>
       </div>
-      <p className=" mb-[1rem] text-center font-bold text-[30px]">
+      <h1 className=" mb-[1rem] text-center font-bold text-[30px]">
         Blog Category or Something
-      </p>
+      </h1>
     </>
   );
 }
