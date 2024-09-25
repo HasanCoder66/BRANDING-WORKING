@@ -7,6 +7,7 @@ import {
   HorizontalPortfolioCard,
   VerticalMobilePortfolioCard,
 } from "../../components";
+import { Helmet } from "react-helmet-async";
 
 const PortfolioPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -45,10 +46,11 @@ const PortfolioPage = () => {
       <Helmet>
         <meta
           name="description"
-          content="Grow your business with Branding Hopes. We offer expert web development, creative design, SEO, and digital marketing services to elevate your brand and drive growth."
+          content="Explore Branding Hopes' portfolio of web development, design, SEO, and digital marketing projects. Discover impactful solutions to elevate your brand and drive success."
         />
-        <link rel="canonical" href="https://www.brandinghopes.com/services" />
+        <link rel="canonical" href="https://www.brandinghopes.com/portfolio" />
       </Helmet>
+
       <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
         <div data-aos="zoom-in-left" className="w-[100vw] ">
           <img
@@ -60,10 +62,10 @@ const PortfolioPage = () => {
           />
         </div>
         <div className="md:7/12 lg:w-6/12 flex flex-col items-center gap-[2rem] pt-[2rem]">
-          <h2 className="text-[2.5rem] tracking-widest	 text-[#fca311] uppercase text-center font-bold">
+          <h1 className="text-[2.5rem] tracking-widest	 text-[#fca311] uppercase text-center font-bold">
             Our Client Completed
             <span className="text-white"> Projects Work</span>
-          </h2>
+          </h1>
         </div>
         <div className=" blogCardCont p-16 flex flex-wrap  pt-[3rem] items-center justify-evenly ">
           {isMobile ? (
