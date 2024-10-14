@@ -20,19 +20,25 @@ function SignUpForm() {
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
+  const [company, setCompany] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   console.log(fullName);
   console.log(email);
   console.log(password);
   console.log(cPassword);
+  console.log(company);
+  console.log(phoneNumber);
 
-  const signupHandlerWithMongoDb = async (e) => {
+  const signupHandler = async (e) => {
     e.preventDefault();
     if (
       email === "" ||
       fullName === "" ||
       password === "" ||
-      cPassword === ""
+      cPassword === "" ||
+      company === "" ||
+      phoneNumber === ""
     ) {
       Swal.fire({
         icon: "error",
@@ -77,6 +83,8 @@ function SignUpForm() {
         username: fullName,
         email,
         password,
+        company,
+        phoneNumber,
       };
       // console.log(userCredential);
 
@@ -170,11 +178,39 @@ function SignUpForm() {
               className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
             >
-              Comfirm Password
+              Confirm Password
             </label>
             <input
               onChange={(cPass) => setCPassword(cPass.target.value)}
               type="password"
+              required
+              className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
+            />
+          </div>
+          <div className="mt-4 relative">
+            <label
+              className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
+              htmlFor="email"
+            >
+              Phone Number
+            </label>
+            <input
+              onChange={(phone) => setPhoneNumber(phone.target.value)}
+              type="number"
+              required
+              className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
+            />
+          </div>
+          <div className="mt-4 relative">
+            <label
+              className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
+              htmlFor="email"
+            >
+              Company Name
+            </label>
+            <input
+              onChange={(comp) => setCompany(comp.target.value)}
+              type="text"
               required
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
             />
@@ -194,7 +230,7 @@ function SignUpForm() {
               type="submit"
               className='border-2 text-2xl overflow-hidden w-full font-semibold className="text-[1.6rem] leading-[1.6rem] relative z-10 bg-theme-red text-white px-[2rem] py-[1.2rem] rounded-lg transition-all before:content-[""] before:absolute before:z-[-1] before:top-0 before:left-0 before:w-full before:h-full before:bg-theme-yellow before:translate-x-[-100%] before:translate-y-[100%] before:rounded-lg hover:before:translate-x-[0%] hover:before:translate-y-[0%] before:transition-all before:duration-300  '
               // disabled:cursor-not-allowed
-              onClick={signupHandlerWithMongoDb}
+              onClick={signupHandler}
             >
               Sign Up
             </button>

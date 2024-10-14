@@ -18,6 +18,11 @@ const userSchema = Schema(
     },
     phoneNumber: {
       type: String,
+      required: true,
+    },
+    company: {
+      type: String,
+      required: true,
     },
     aboutMe: {
       type: String,

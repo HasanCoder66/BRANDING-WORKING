@@ -11,6 +11,8 @@ const { genSalt, hash } = bcryptjs;
 
 //create register controller ===>
 export const register = async (req, res, next) => {
+  const { username, email, phoneNumber, company, aboutMe, profileImg } =
+    req.body;
   // console.log(req.body, 'req.body ====>')
   // console.log(req.body.username, 'req.body.username ====>')
   // console.log(req.body.email, 'req.body.email ====>')
@@ -23,10 +25,14 @@ export const register = async (req, res, next) => {
     // const email = req.body.email;
 
     const newUser = new User({
-      username: req.body.username,
-      email: req.body.email,
-      // password: req.body.password,
+      username,
+      email,
       password: hashedPassword,
+      company,
+      phoneNumber,
+      company,
+      aboutMe,
+      profileImg,
     });
 
     // console.log(newUser)
@@ -36,16 +42,40 @@ export const register = async (req, res, next) => {
     const { password, ...others } = newUser._doc; //
 
     await newUser.save();
-    let message = "User Create Successfully";
-    res.status(200).json({
-      status: "Success",
-      message: message,
-      data: others,
-    });
-  } catch (error) {
-    next(createError(error.status, error.message));
+    // Create JWT
+    const payload = {
+      user: {
+        id: newUser.id,
+      },
+    };
+
+    jwt.sign(
+      payload,
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" },
+      (err, token) => {
+        if (err) throw err;
+        res.json({ token });
+      }
+    );
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server error");
   }
+  //   let message = "User Create Successfully";
+  //   res.status(200).json({
+  //     status: "Success",
+  //     message: message,
+  //     data: others,
+  //   });
+  // } catch (error) {
+  //   next(createError(error.status, error.message));
+  // }
 };
+
+
+
+
 
 //create login controller ===>
 export async function login(req, res, next) {
@@ -57,12 +87,36 @@ export async function login(req, res, next) {
       next(createError(404, `User not found`)); //${message}
       return;
     }
+
     const isCorrect = await bcryptjs.compare(req.body.password, user.password);
     if (!isCorrect) {
       // next(400, "Incorrect email or password")
       next(createError(400, "Incorrect email or password"));
       return;
     }
+
+// Create JWT
+// const payload = {
+//   user: {
+//     id: user.id,
+//   },
+// };
+
+// jwt.sign(
+//   payload,
+//   process.env.JWT_SECRET,
+//   { expiresIn: '1h' },
+//   (err, token) => {
+//     if (err) throw err;
+//     res.json({ token });
+//   }
+// );
+// } catch (err) {
+// console.error(err.message);
+// res.status(500).send('Server error');
+// }
+
+
     const token = jwt.sign({ user }, process.env.JWT, { expiresIn: "24h" });
     // console.log(token);
     // console.log(user);
