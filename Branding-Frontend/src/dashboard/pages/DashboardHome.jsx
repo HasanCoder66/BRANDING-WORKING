@@ -1,7 +1,7 @@
 import React from "react";
 import BodyMain from "../components/BodyMain";
 
-function Home() {
+function DashboardHome() {
   return (
     <div className="flex">
       <BodyMain />
@@ -9,4 +9,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default DashboardHome;
