@@ -1,5 +1,4 @@
 import React from "react";
-// import Header from "./Header";
 import Box from "./Box";
 import Box1 from "./Box1";
 import Box2 from "./Box2";
@@ -11,8 +10,6 @@ import { FaCcStripe, FaCalendarAlt } from "react-icons/fa";
 const BodyMain = () => {
   return (
     <div className="w-full bg-[#14213d] ">
-      {/* <Header /> */}
-
       <div class="grid grid-cols-4 gap-3  p-5 ">
         <Box
           title={"TOTAL INVOICE GENERATED"}

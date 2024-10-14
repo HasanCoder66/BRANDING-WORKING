@@ -331,6 +331,7 @@ import RejectedAppointments from "./dashboard/pages/RejectedAppointments";
 import { Nav } from './components';
 import DashboardHome from './dashboard/pages/DashboardHome';
 import DashboardFooter from './dashboard/components/DashboardFooter';
+import DashboardNavbar from './dashboard/components/DashboardNavbar';
 
 // Layout for the main website pages
 const WebLayout = () => {
@@ -358,7 +359,7 @@ const WebLayout = () => {
 const DashboardLayout = () => {
   return (
     <div className="overflow-hidden">
-      <Nav /> {/* You can customize the Nav for the dashboard */}
+      <DashboardNavbar /> {/* You can customize the Nav for the dashboard */}
       <div className="flex">
         <Sidebar />
         <main className="flex-1 bg-gray-100">

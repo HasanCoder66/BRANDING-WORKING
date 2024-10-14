@@ -70,7 +70,7 @@ const App = () => {
   };
 
   return (
-    <div className="bg-[#14213d] hover:text-[#fca311] text-white flex items-end justify-end mt-[85px] ">
+    <div className="bg-[#14213d]  text-white flex items-end justify-end  ">
       <button
         className="fixed lg:hidden z-90 bottom-10 right-8 bg-teal-800 w-10 h-10 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-teal-800 duration-300"
         onClick={toggleSidebar}
