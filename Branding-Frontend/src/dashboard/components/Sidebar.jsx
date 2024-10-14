@@ -70,7 +70,7 @@ const App = () => {
   };
 
   return (
-    <div className="h-full flex items-end justify-end">
+    <div className="bg-[#14213d] hover:text-[#fca311] text-white flex items-end justify-end mt-[85px] ">
       <button
         className="fixed lg:hidden z-90 bottom-10 right-8 bg-teal-800 w-10 h-10 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-teal-800 duration-300"
         onClick={toggleSidebar}
@@ -99,7 +99,7 @@ const App = () => {
           {Menu.map((menu, index) => (
             <React.Fragment key={index}>
               <li
-                className={`flex rounded-md p-2 font-semibold cursor-pointer hover:text-gray-500 text-xl items-center gap-x-4 ${
+                className={`flex rounded-md p-2 font-semibold cursor-pointer hover:text-[#fca311]  text-xl items-center gap-x-4 ${
                   menu.gap ? "mt-9" : "mt-2"
                 }`}
               >

@@ -3,7 +3,7 @@ import BodyMain from "../components/BodyMain";
 
 function DashboardHome() {
   return (
-    <div className="flex">
+    <div className="flex mt-[85px] ">
       <BodyMain />
     </div>
   );
