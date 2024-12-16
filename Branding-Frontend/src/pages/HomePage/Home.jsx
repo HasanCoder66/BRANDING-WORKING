@@ -1,8 +1,9 @@
-import "./Home.css";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+import "./Home.css";
 import {
   Business,
   Button,
@@ -15,6 +16,7 @@ import {
 } from "../../components";
 
 const HomePage = () => {
+
   useEffect(() => {
     AOS.init({
       disable: false,
@@ -34,6 +36,7 @@ const HomePage = () => {
       anchorPlacement: "top-bottom",
     });
   }, []);
+  
   return (
     <>
       {/* For Seo ===>  */}
