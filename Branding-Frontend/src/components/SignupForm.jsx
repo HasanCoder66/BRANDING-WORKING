@@ -20,15 +20,15 @@ function SignUpForm() {
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
-  const [company, setCompany] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  // const [company, setCompany] = useState("");
+  // const [phoneNumber, setPhoneNumber] = useState("");
 
   console.log(fullName);
   console.log(email);
   console.log(password);
   console.log(cPassword);
-  console.log(company);
-  console.log(phoneNumber);
+  // console.log(company);
+  // console.log(phoneNumber);
 
   const signupHandler = async (e) => {
     e.preventDefault();
@@ -36,9 +36,9 @@ function SignUpForm() {
       email === "" ||
       fullName === "" ||
       password === "" ||
-      cPassword === "" ||
-      company === "" ||
-      phoneNumber === ""
+      cPassword === ""
+      // company === "" ||
+      // phoneNumber === ""
     ) {
       Swal.fire({
         icon: "error",
@@ -83,8 +83,8 @@ function SignUpForm() {
         username: fullName,
         email,
         password,
-        company,
-        phoneNumber,
+        // company,
+        // phoneNumber,
       };
       // console.log(userCredential);
 
@@ -124,15 +124,16 @@ function SignUpForm() {
 
   return (
     <div className="bg-login-bg-imag w-[60%] flex justify-center ">
-      <div className="flex justify-center w-full items-center gap-[4rem]  px-12 py-10">
-        <form className="w-[50%]  p-10 shadow-lg bg-white   rounded-lg">
+      <div className="flex justify-center w-full items-center gap-[4rem]  px-12 ">
+        <form className="w-[60%]  p-10 shadow-lg bg-white   rounded-lg">
           <h1 className="text-2xl block  font-bold text-theme-red text-center uppercase">
-            Join Branding Hopes!
+            <span>Join</span> Branding Hopes!
             <br />
           </h1>
           <div className="mt-4 relative">
             <label
-              className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
+              // text-theme-red
+              className="    absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
             >
               Full Name
@@ -140,13 +141,13 @@ function SignUpForm() {
             <input
               onChange={(name) => setFullName(name.target.value)}
               type="text"
-              className=" w-full border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
+              className=" w-full border mt-2 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
               placeholder=""
             />
           </div>
-          <div className="mt-4 relative">
+          <div className="mt-2 relative">
             <label
-              className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
+              className="absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
             >
               Email
@@ -155,13 +156,13 @@ function SignUpForm() {
               onChange={(email) => setEmail(email.target.value)}
               type="email"
               required
-              className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
+              className=" w-full  border mt-2 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
             />
           </div>
 
-          <div className="mt-5 relative">
+          <div className="mt-2 relative">
             <label
-              className="absolute  text-theme-red top:[-1] left-1 bg-white px-3 py-1   "
+              className="absolute top:[-1] left-1 bg-white px-3 py-1   "
               htmlFor="password"
             >
               Password
@@ -170,12 +171,12 @@ function SignUpForm() {
               onChange={(pass) => setPassword(pass.target.value)}
               type="password"
               required
-              className=" w-full  border  mt-4  py-4 px-2 rounded-lg focus:outline-none focus:ring-0 focus:border-gray-600"
+              className="w-full border mt-2 py-4 px-2 rounded-lg focus:outline-none focus:ring-0 focus:border-gray-600"
             />
           </div>
-          <div className="mt-4 relative">
+          <div className="mt-2 relative">
             <label
-              className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
+              className="absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
             >
               Confirm Password
@@ -187,7 +188,8 @@ function SignUpForm() {
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
             />
           </div>
-          <div className="mt-4 relative">
+
+          {/* <div className="mt-4 relative">
             <label
               className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
@@ -214,7 +216,7 @@ function SignUpForm() {
               required
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
             />
-          </div>
+          </div> */}
 
           <div className="captcha w-full mt-8 mb-8">
             {/* <ReCAPTCHA

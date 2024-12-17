@@ -16,8 +16,6 @@ import BlogRoute from "./routes/blogRoutes.js";
 dotenv.config();
 const app = express();
 
-//Port defined in env if in no one in .env then 5500 is executed.. ====>
-// const PORT =  5000; //
 const PORT = process.env.PORT || 5500; //
 // console.log(PORT);
 

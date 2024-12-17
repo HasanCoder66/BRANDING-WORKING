@@ -4,7 +4,8 @@ import mongoose from "mongoose";
 const MONGO_URL = process.env.MONGO_URI
 
 dotenv.config();
-const connectDB = async () => {
+
+export const connectDB = async () => {
     try {
       await mongoose.connect(MONGO_URL, {
         useNewUrlParser: true,
@@ -17,4 +18,3 @@ const connectDB = async () => {
     }
   };
   
-  export default connectDB;
