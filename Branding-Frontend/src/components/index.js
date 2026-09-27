@@ -6,7 +6,7 @@ import Button from "./Button";
 import TextEffect from "./TextEffects";
 import ServiceSectionHead from "./ServiceSectionHead";
 import ServicesCards from "./ServicesCards";
-import TestimonialCard from "./TestimonialCard.jsx";
+// import TestimonialCard from "./TestimonialCard.jsx";
 import Contact from "./Contact";
 import MapLocation from "./MapLocation";
 import BlogCard from "./BlogCard";
@@ -30,6 +30,7 @@ import VerticalBlogCard from "./VerticalBlogCard.jsx";
 import HorizontalBlogCard from './HorizontalBlogCard.jsx';
 import HorizontalPortfolioCard from './HorizontalPortfolioCard.jsx';
 import VerticalMobilePortfolioCard from './VerticalMobilePortfolioCard.jsx';
+import TestimonialSection from "./Testimonials.jsx";
 import Footer from "./Footer";
 
 export {
@@ -41,7 +42,7 @@ export {
   TextEffect,
   ServiceSectionHead,
   ServicesCards,
-  TestimonialCard,
+  // TestimonialCard,
   Testimonials,
   Contact,
   MapLocation,
@@ -66,4 +67,5 @@ export {
   SignUpForm,
   LoginForm,
   Footer,
+  TestimonialSection,
 };

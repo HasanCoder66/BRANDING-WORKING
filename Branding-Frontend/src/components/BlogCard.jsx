@@ -9,7 +9,7 @@ const BlogCard = ({ data }) => {
     <Link to={routeLink}>
       <Card
         key={id}
-        className="  object-contain overflow-hidden border-2px-[#fca311]"
+        className="h-[450px] object-contain overflow-hidden border-2px-[#fca311]"
       >
         <Card.Img
           width={826}

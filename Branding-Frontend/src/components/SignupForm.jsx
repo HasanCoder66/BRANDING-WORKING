@@ -187,7 +187,7 @@ function SignUpForm() {
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
             />
           </div>
-          <div className="mt-4 relative">
+          {/* <div className="mt-4 relative">
             <label
               className="   text-theme-red absolute top:[-1] left-1 bg-white px-3 py-1"
               htmlFor="email"
@@ -214,7 +214,7 @@ function SignUpForm() {
               required
               className=" w-full  border mt-4 px-4  py-4 focus:outline-none focus:ring-0 focus:border-gray-600 rounded-lg"
             />
-          </div>
+          </div> */}
 
           <div className="captcha w-full mt-8 mb-8">
             {/* <ReCAPTCHA

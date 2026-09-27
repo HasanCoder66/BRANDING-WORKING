@@ -83,15 +83,19 @@ const data = [
       "Establish thought leadership and drive engagement with regular blog posts that provide value to your audience and keep them coming back for more.",
       // routeLink: "/packages/seo",
   },
-  {
-    id: "10",
-    buttonContent: "View Packages",
-    imgUrl:CWriting,
-    title: "English, Arabic, Urdu Typing",
-    desc:
-      "Seamlessly communicate with your audience in their preferred language with our typing services, ensuring your message is clear and culturally relevant. ",
-    // routeLink: "/packages/typing",
-  },
+
+
+  // {
+  //   id: "10",
+  //   buttonContent: "View Packages",
+  //   imgUrl:CWriting,
+  //   title: "English, Arabic, Urdu Typing",
+  //   desc:
+  //     "Seamlessly communicate with your audience in their preferred language with our typing services, ensuring your message is clear and culturally relevant. ",
+  //   // routeLink: "/packages/typing",
+  // },
+
+  
   // {
   //   id: "9",
   //   buttonContent: "View Packages",

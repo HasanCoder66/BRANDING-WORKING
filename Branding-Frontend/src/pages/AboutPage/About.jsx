@@ -11,29 +11,24 @@ import amc from "../../assets/amc.jpg";
 import munna from "../../assets/munna.jpg";
 import hasan from "../../assets/hasan.png";
 import rizzwan from "../../assets/rizz.jpeg";
+import ahsan from "../../assets/ahsan.png";
 import aboutCover from "../../assets/aboutCover.png";
 import ourMission from "../../assets/mission.png";
 import ourValues from "../../assets/values.png";
 import ourTeam from "../../assets/team.png";
 import whyChooseUs from "../../assets/whychoose.png";
 import ourService from "../../assets/service.png";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import "aos/dist/aos.css";
 
 const AboutPage = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  var firstBoxText = `At Branding Hopes, our mission is to empower businesses with innovative digital marketing solutions. We aim to drive growth and success while helping clients navigate the digital landscape.
- `;
-  var secondBoxText = `We believe in integrity, fostering trust with our clients and partners. Innovation drives us to enhance our services continuously, while collaboration and excellence are at the core of our approach.
-
- `;
-  var thirdBoxText = `Branding Hopes offers a range of digital marketing services, including web design, development, and SEO. Our expertise boosts online visibility and brand presence through social media management.
- `;
-  var fourthBoxText = `Choosing Branding Hopes means partnering with a passionate team dedicated to your success. We combine industry knowledge with creative strategies to deliver measurable results through a personalized approach.
- `;
-  var fifthBoxText = `Our team consists of skilled professionals with diverse backgrounds in marketing, design, and technology. We foster a culture of continuous learning to stay ahead of industry trends and achieve your goals.
- Feel free to make any adjustments to better fit your brand!
- `;
+  var firstBoxText = `At Branding Hopes, our mission is to empower businesses with innovative digital marketing solutions. We aim to drive growth and success while helping clients navigate the digital landscape.`;
+  var secondBoxText = `We believe in integrity, fostering trust with our clients and partners. Innovation drives us to enhance our services continuously, while collaboration and excellence are at the core of our approach.`;
+  var thirdBoxText = `Branding Hopes offers a range of digital marketing services, including web design, development, and SEO. Our expertise boosts online visibility and brand presence through social media management.`;
+  var fourthBoxText = `Choosing Branding Hopes means partnering with a passionate team dedicated to your success. We combine industry knowledge with creative strategies to deliver measurable results through a personalized approach.`;
+  var fifthBoxText = `Our team consists of skilled professionals with diverse backgrounds in marketing, design, and technology. We foster a culture of continuous learning to stay ahead of industry trends and achieve your goals. Feel free to make any adjustments to better fit your brand!`;
 
   useEffect(() => {
     AOS.init({
@@ -60,13 +55,12 @@ const AboutPage = () => {
       setIsMobile(window.innerWidth < 768);
     };
     window.addEventListener("resize", handleResize);
-
     handleResize();
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <>
       <Helmet>
@@ -78,126 +72,136 @@ const AboutPage = () => {
       </Helmet>
 
       <div className="min-h-[100vh] landingContainer py-[70px] flex flex-col justify-center items-center gap-[20px]">
-        <div data-aos="fade-down" className="w-[100vw] ">
+        <a href="#">
+          <div className="flex items-center justify-center bg-[#fca311] w-[50px] h-[50px] fixed bottom-4 right-4 rounded-lg ">
+            <ArrowUpwardIcon className="text-white text-2xl" />
+          </div>
+        </a>
+        <div data-aos="fade-down" className="w-full">
           <img
             src={aboutCover}
-            width={3240}
-            height={1820}
             alt="About-Cover"
-            className="h-[50vh] w-[100%] object-cover	"
+            className="w-full max-h-[60vh] object-cover"
           />
         </div>
+
         <div className="flex flex-col items-center gap-[2rem] lg:px-[8rem] pt-[2rem]">
-          <h1 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
+          <h1
+            className="tracking-widest uppercase text-[#fca311] text-center font-bold"
+            style={{ fontSize: "clamp(2rem, 5vw + 1rem, 3.5rem)" }}
+          >
             <span className="text-white">About </span> Branding Hopes
           </h1>
-          <p className=" text-white text-center">
+
+          <p
+            className="text-white text-center"
+            style={{ fontSize: "clamp(1rem, 2vw + 0.5rem, 1.2rem)" }}
+          >
             At <span className="text-[#fca311]">Branding Hopes</span>, we
-            transcend the conventional role of a digital marketing agency. We
-            are your steadfast partners, committed to propelling your success to
-            new heights. Fueled by an unwavering passion for creativity and an
-            unyielding dedication to tangible results, we stand alongside
-            businesses like yours, empowering them to not just survive, but
-            truly thrive in the dynamic landscape of the digital age. With our
-            strategic insights, innovative solutions, and personalized approach,
-            we pave the way for your brand's remarkable journey towards enduring
-            success.
+            transcend the conventional role of a digital marketing agency...
           </p>
         </div>
 
-        <div className="">
-          <div className="">
-            <AboutRightCard
-              text={firstBoxText}
-              heading="Our Mission"
-              imgLink={ourMission}
-            />
-            <AboutLeftCard
-              text={secondBoxText}
-              heading="Our Values"
-              imgLink={ourValues}
-            />
-            <AboutRightCard
-              text={thirdBoxText}
-              heading="Our Services"
-              imgLink={ourService}
-            />
-            <AboutLeftCard
-              text={fourthBoxText}
-              heading="Why Choose Us?"
-              imgLink={whyChooseUs}
-            />
-            <AboutRightCard
-              text={fifthBoxText}
-              lastLine="Feel free to make any adjustments to better fit your brand!"
-              heading="Our Team"
-              imgLink={ourTeam}
-            />
-          </div>
+        <div>
+          <AboutRightCard
+            text={firstBoxText}
+            heading="Our Mission"
+            imgLink={ourMission}
+          />
+          <AboutLeftCard
+            text={secondBoxText}
+            heading="Our Values"
+            imgLink={ourValues}
+          />
+          <AboutRightCard
+            text={thirdBoxText}
+            heading="Our Services"
+            imgLink={ourService}
+          />
+          <AboutLeftCard
+            text={fourthBoxText}
+            heading="Why Choose Us?"
+            imgLink={whyChooseUs}
+          />
+          <AboutRightCard
+            text={fifthBoxText}
+            heading="Our Team"
+            imgLink={ourTeam}
+          />
+          
         </div>
 
-        {/* Team members ====> */}
         <div className="mt-[4rem]">
-          <div>
-            <h2 className="text-[3.5rem] tracking-widest	uppercase text-[#fca311] text-center font-bold">
-              <span className="text-white">Meet Our </span> Team Members
-            </h2>
-          </div>
+          <h2
+            className="tracking-widest uppercase text-[#fca311] text-center font-bold"
+            style={{ fontSize: "clamp(2rem, 5vw + 1rem, 3rem)" }}
+          >
+            <span className="text-white">Meet Our </span> Team Members
+          </h2>
         </div>
-        {isMobile ? (
-          // Code for mobile view
 
+        {isMobile ? (
           <div className="flex justify-evenly flex-wrap gap-[15px] pt-[6rem]">
-            <div data-aos="zoom-in-right">
-              <TeamMatesCard
-                imgUrl={rizzwan}
-                name="Rizzwan Ahmed"
-                city="Karachi, Pakistan"
-                Role="Full Stack Developer"
-                // buttonContent="view more about"
-              />
-            </div>
-            <div data-aos="zoom-in">
-              <TeamMatesCard
-                imgUrl="https://yt3.googleusercontent.com/y03yJ4RBXAk6ngMs-hFHRwtPDtIFiA83YWDNzqo-DBg4dAvERHCu_y-xuaganp0eM0PTskOQyg=s160-c-k-c0x00ffffff-no-rj"
-                name="Muhammad Hasan"
-                city="Karachi, Pakistan"
-                Role="Full Stack Developer"
-                // buttonContent="view more about"
-              />
-            </div>
-            <div data-aos="zoom-out-up">
-              <TeamMatesCard
-                imgUrl={amc}
-                name="Abdul Majeed"
-                city="Karachi, Pakistan"
-                Role="Web Developer"
-                // buttonContent="view more about"
-              />
-            </div>
-            <div data-aos="zoom-out-up">
-              <TeamMatesCard
-                imgUrl={munna}
-                name="Mukhtar Ahmed"
-                city="Karachi, Pakistan"
-                Role="Graphic Designer"
-                // buttonContent="view more about"
-              />
-            </div>
+            {[
+              {
+                imgUrl: rizzwan,
+                name: "Rizzwan Ahmed",
+                city: "Karachi, Pakistan",
+                Role: "Full Stack Developer",
+              },
+              {
+                imgUrl: "https://avatars.githubusercontent.com/u/140997677?v=4",
+                name: "Muhammad Hasan",
+                city: "Karachi, Pakistan",
+                Role: "Full Stack Developer",
+              },
+              {
+                imgUrl: ahsan,
+                name: "Muhammad Ahsan",
+                city: "Karachi, Pakistan",
+                Role: "Digital Marketer",
+              },
+              {
+                imgUrl: amc,
+                name: "Abdul Majeed",
+                city: "Karachi, Pakistan",
+                Role: "Web Developer",
+              },
+              {
+                imgUrl: munna,
+                name: "Mukhtar Ahmed",
+                city: "Karachi, Pakistan",
+                Role: "Graphic Designer",
+              },
+            ].map((member, idx) => (
+              <div key={idx} data-aos="zoom-in">
+                <TeamMatesCard {...member} />
+              </div>
+            ))}
           </div>
         ) : (
-          // Code for larger screens
           <div>
             <TeamMembersCard
-              imgUrl="https://yt3.googleusercontent.com/y03yJ4RBXAk6ngMs-hFHRwtPDtIFiA83YWDNzqo-DBg4dAvERHCu_y-xuaganp0eM0PTskOQyg=s160-c-k-c0x00ffffff-no-rj"
+              imgUrl="https://avatars.githubusercontent.com/u/140997677?v=4"
               name="Muhammad Hasan"
               city="Karachi, Pakistan"
               Role="Full Stack Developer"
               desc="Experienced MERN Stack Developer with expertise in MongoDB,
-Express.js, React.js, and Node.js. Seeking opportunities to expand
-my skills and contribute to innovative web development projects."
-              visitLink="https://www.linkedin.com/in/muhammad-hasan-13590a2a5/"
+ Express.js, React.js, and Node.js. Seeking opportunities to expand
+ my skills and contribute to innovative web development projects."
+              visitLink="https://www.linkedin.com/in/hasancoder66/"
             />
+
+            <TeamMembersCard
+              imgUrl={ahsan}
+              name="Muhammad Ahsan"
+              city="Karachi, Pakistan"
+              Role="Digital Marketer"
+              desc="I’m Ahsan Ashraf, a passionate Digital Marketer focused on helping brands grow through effective digital strategies, creative content, and result-driven marketing. I’m always exploring new trends and strategies to build a stronger digital presence and achieve meaningful results."
+              visitLink="https://www.linkedin.com/in/hafiz-ahsan-ashraf-3b21b0405/"
+            />
+
+
             <TeamMembersCard
               imgUrl={rizzwan}
               name="Rizzwan Ahmed"
@@ -211,10 +215,9 @@ my skills and contribute to innovative web development projects."
               name="Mukhtar Ahmed"
               city="Karachi, Pakistan"
               Role="Web & Graphic Designer"
-              desc="A skilled developer with expertise in creating scalable web applications using modern frameworks like React and Node.js. Passionate about delivering high-quality, user-friendly solutions."
+              desc="A skilled Graphic Designer with expertise Adobe photoshop, Adobe Illustrator & many more.."
               visitLink="https://www.linkedin.com/in/mukhtar-ahmed-al-aziz-8372ab257/"
             />
-
             <TeamMembersCard
               imgUrl={amc}
               name="Abdul Majeed"
@@ -223,6 +226,7 @@ my skills and contribute to innovative web development projects."
               desc="A skilled developer with expertise in creating scalable web applications using modern frameworks like React and Node.js. Passionate about delivering high-quality, user-friendly solutions."
               visitLink="https://www.linkedin.com/in/abdul-majeed-0b0bb0a5/"
             />
+            
           </div>
         )}
       </div>

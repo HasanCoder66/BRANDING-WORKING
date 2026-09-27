@@ -4,13 +4,13 @@ import styles from "./styles/style.js";
 const CTA = () => (
   <section
     data-aos="zoom-in-right"
-    className={`w-[80%] bg-white   ${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col rounded-[20px] box-shadow`}
+    className={`w-[80%] bg-[#14213d]  ${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col rounded-[20px] box-shadow`}
   >
     <div className="flex-1 flex flex-col">
-      <h2 className={`${styles.heading2} font-bold uppercase`}>
+      <h2 className={`${styles.heading2} font-bold uppercase text-white`}>
         Let’s try our service now!
       </h2>
-      <p className={`${styles.paragraph} max-w-[500px] mt-5`}>
+      <p className={`${styles.paragraph} max-w-[500px] mt-5 text-white`}>
         Everything you need to accept card payments and grow your business
         anywhere on the planet.
       </p>

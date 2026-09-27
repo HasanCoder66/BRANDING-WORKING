@@ -9,7 +9,18 @@
     background-size: 40px 40px;
 }
 
-.landingContainer {
+/* .landingContainer {
+    background: rgb(6, 13, 27);
+    background: linear-gradient(180deg, rgba(6, 13, 27, 1) 0%, rgba(20, 33, 61, 1) 35%, rgba(28, 41, 70, 1) 100%);
+    background:
+        linear-gradient(135deg, #0000 20.5%, #000000 0 29.5%, #0000 0) 0 5px,
+        linear-gradient(45deg, #0000 8%, #000000 0 17%, #0000 0 58%) 10px 0,
+        linear-gradient(135deg, #0000 8%, #000000 0 17%, #0000 0 58%, #000000 0 67%, #0000 0),
+        linear-gradient(45deg, #0000 8%, #000000 0 17%, #0000 0 58%, #000000 0 67%, #0000 0 83%, #000000 0 92%, #0000 0),
+        #14213d;
+    background-size: 20px 20px;
+} */
+body {
     /* background: rgb(6, 13, 27);
     background: linear-gradient(180deg, rgba(6, 13, 27, 1) 0%, rgba(20, 33, 61, 1) 35%, rgba(28, 41, 70, 1) 100%); */
     background:

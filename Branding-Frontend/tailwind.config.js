@@ -28,6 +28,9 @@ export default {
       animation: {
         moveDown: "moveDown 0.7s ease-out 1",
       },
+      fontFamily: {
+      montserrat: ['Montserrat', 'sans-serif'],
+    },
       keyframes: {
         moveDown: {
           "0%": {
