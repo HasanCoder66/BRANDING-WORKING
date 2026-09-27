@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/blogview.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { CREATEBLOG_URL } from "../constants/apis";
+import { CREATE_BLOG_URL } from "../constants/apis";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -18,8 +18,13 @@ function BlogView() {
   // console.log(description, "description =>");
   // console.log(imgFile, "imgFile =>");
   // console.log(category, "category =>");
+  // const navigate = useNavigate();
+
+
+
 
   const PostBlogHandler = async (e) => {
+
     e.preventDefault();
     console.log(title, "title =>");
     console.log(content, "content =>");
@@ -36,34 +41,34 @@ function BlogView() {
     };
 
     try {
-      const blogResult = await axios.post(`/api/${CREATEBLOG_URL}`, blogData);
+      const blogResult = await axios.post(`/api/${CREATE_BLOG_URL}`, blogData);
       console.log(blogResult, "blog result ===>");
-      console.log(blogResult?.data?.status, 'data ===>');
+      console.log(blogResult?.data?.status, "data ===>");
 
       if (blogResult?.data?.status === "Success") {
         Swal.fire({
           title: "Good job!",
-          text: "user SignUp successfully!",
+          text: "Blog Posted successfully!",
           icon: "success",
         });
 
-        setTimeout(() => {
-          navigate("/about");
-        }, 3000);
+        
+
+        // setTimeout(() => {
+        //   navigate("/about");
+        // }, 3000);
       }
+      setCategory("");
+        setTitle("")
+        setContent("")
+        setDescription("")
+        setImageFile("")
+
     } catch (error) {
       console.log(error);
-      // console.log(error.response.data.message.includes("duplicate key"));
-      // if (error.response.data.message.includes("duplicate key")) {
-      //   Swal.fire({
-      //     icon: "error",
-      //     title: "Oops...",
-      //     text: `Email Already Registered`,
-      //   });
-      // }
     }
-    
   };
+
   return (
     <form
       onSubmit={PostBlogHandler}

@@ -16,20 +16,20 @@ const userSchema = Schema(
       required: true,
       min: 6,
     },
-    phoneNumber: {
-      type: String,
-      required: true,
-    },
-    company: {
-      type: String,
-      required: true,
-    },
-    aboutMe: {
-      type: String,
-    },
-    profileImg: {
-      type: String,
-    },
+    // phoneNumber: {
+    //   type: String,
+    //   required: true,
+    // },
+    // company: {
+    //   type: String,
+    //   required: true,
+    // },
+    // aboutMe: {
+    //   type: String,
+    // },
+    // profileImg: {
+    //   type: String,
+    // },
   },
   { timestamps: true }
 );
